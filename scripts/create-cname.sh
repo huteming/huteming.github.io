@@ -3,4 +3,4 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-echo "huteming.site" > ./docs/.vuepress/dist/CNAME
+echo "huteming.site" > ./blog/.vuepress/dist/CNAME

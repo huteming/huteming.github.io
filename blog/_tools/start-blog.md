@@ -1,3 +1,11 @@
+---
+title: 开始你的博客
+summary: 快速开始属于你自己的博客
+date: 2020-03-30
+---
+
+------------------------------------
+
 ### 搭建博客
 
 该博客是利用 VuePress 搭建，[文档在这](https://v1.vuepress.vuejs.org/zh/guide/) 
@@ -14,12 +22,12 @@ huteming.site
 
 2. 登录域名管理（如[阿里云](https://dc.console.aliyun.com/next/index#/domain/list/all-domain)）添加两条 CNAME 解析，如图：
 
-![阿里云CNAME解析](./cname.png)
+![阿里云CNAME解析](/start-blog/cname.png)
 
 3. 最后在github项目中配置 cname 解析，
 
-![github settings](./settings.png)
-![github domain](./domain.png)
+![github settings](/start-blog/settings.png)
+![github domain](/start-blog/domain.png)
 
 ### Travis-CI 自动部署
 
@@ -29,13 +37,13 @@ huteming.site
 
 3. 启用博客项目
 
-![travis-ci enable](./travis-ci_enable.png)
+![travis-ci enable](/start-blog/travis-ci_enable.png)
 
 4. 配置travis-ci
 
 将刚才创建的 Github Access Token 配置到 travis-ci
 
-![travis-ci settings](./travis-ci_settings.png)
+![travis-ci settings](/start-blog/travis-ci_settings.png)
 
 5. 在项目根目录添加 .travis.yml 文件
 
@@ -64,5 +72,6 @@ deploy:
     branch: dev
   # 发布到指定分支，默认是 gh-pages
   target_branch: master
-  commit_message: deploy
+  # 自定义 commit message
+  # commit_message: deploy
 ```

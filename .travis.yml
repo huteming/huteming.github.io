@@ -6,15 +6,15 @@ install:
 script:
   - npm run build
   # 如果需要配置自定义域名，在 build 目录下创建 CNAME
-  - echo "huteming.site" > ./docs/.vuepress/dist/CNAME
+  - echo "huteming.site" > ./blog/.vuepress/dist/CNAME
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: docs/.vuepress/dist
+  local_dir: blog/.vuepress/dist
   github_token: $GITHUB_TOKEN
   # 触发部署分支
   on:
     branch: dev
   # 发布到指定分支，默认是 gh-pages
   target_branch: master
-  commit_message: deploy
+  # commit_message: deploy

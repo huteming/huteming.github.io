@@ -1,14 +1,15 @@
 module.exports = {
   title: '特明的日志',
-  description: '',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
 
+  theme: '@vuepress/theme-blog',
   themeConfig: {
-    logo: '/logo.png',
+    dateFormat: 'YYYY-MM-DD',
     nav: [
-      { text: '开始你的博客', link: '/start-blog/' },
+      { text: '编程', link: '/' },
+      { text: '工具指南', link: '/tools/' },
       // {
       //   text: '手写实现',
       //   items: [
@@ -16,6 +17,28 @@ module.exports = {
       //   ]
       // }
     ],
+    directories: [
+      {
+        id: 'tools',
+        dirname: '_tools',
+        path: '/tools/',
+        title: '工具指南',
+        itemPermalink: '/tools/:slug',
+      },
+      {
+        id: 'coding',
+        dirname: '_coding',
+        path: '/',
+        title: '编程',
+        itemPermalink: '/coding/:slug',
+      },
+    ],
+    globalPagination: {
+      lengthPerPage: 5,
+    },
+    sitemap: {
+      hostname: 'https://huteming.site',
+    },
 
     // 页面底部显示最后更新时间
     lastUpdated: 'Last Updated', // string | boolean
