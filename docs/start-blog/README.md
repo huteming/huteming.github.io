@@ -6,11 +6,11 @@
 
 1. 在项目的根目录添加 CNAME 文件，其中包含一个顶级域名，像这样：
 
-> 需要注意的是：如果是利用 Github Pages，发布打包后生成的静态目录文件夹（如 dist）到 github 分支，那个这个 CNAME 文件需要放到这个 dist 的目录下
-
 ```bash
 huteming.site
 ```
+
+> 需要注意的是：如果是利用 Github Pages，发布打包后生成的静态目录文件夹（如 dist）到 github 分支，那个这个 CNAME 文件需要放到这个 dist 的目录下
 
 2. 登录域名管理（如[阿里云](https://dc.console.aliyun.com/next/index#/domain/list/all-domain)）添加两条 CNAME 解析，如图：
 
