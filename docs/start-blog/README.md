@@ -41,7 +41,7 @@ huteming.site
 
 > 注意文件名以 "." 开头。
 
-> 这里使用的 deploy 是使用官方提供的部署 GitHub Pages 使用的模板，[Travis 文档](https://docs.travis-ci.com/user/deployment/pages/)
+> 这里使用的 deploy 是修改自官方提供的部署 GitHub Pages 使用的模板，[Travis 文档](https://docs.travis-ci.com/user/deployment/pages/)
 
 ```bash
 language: node_js
@@ -59,6 +59,10 @@ deploy:
   local_dir: docs/.vuepress/dist
   github_token: $GITHUB_TOKEN
   keep_history: true
+  # 触发部署分支
   on:
-    branch: master
+    branch: dev
+  # 发布到指定分支，默认是 gh-pages
+  target_branch: master
+  commit_message: deploy
 ```

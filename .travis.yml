@@ -12,6 +12,9 @@ deploy:
   skip_cleanup: true
   local_dir: docs/.vuepress/dist
   github_token: $GITHUB_TOKEN
-  keep_history: true
+  # 触发部署分支
   on:
     branch: dev
+  # 发布到指定分支，默认是 gh-pages
+  target_branch: master
+  commit_message: deploy
