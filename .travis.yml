@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - lts/*
+install:
+  - npm install --registry=https://registry.npm.taobao.org
+script:
+  - npm run build
+  # 如果需要配置自定义域名，在 build 目录下创建 CNAME
+  - echo "huteming.site" > ./docs/.vuepress/dist/CNAME
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: docs/.vuepress/dist
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: dev

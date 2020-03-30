@@ -1,0 +1,23 @@
+{
+  "name": "huteming.github.io",
+  "version": "1.0.0",
+  "description": "胡特明的日记",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huteming/huteming.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huteming/huteming.github.io/issues"
+  },
+  "homepage": "https://github.com/huteming/huteming.github.io#readme",
+  "dependencies": {
+    "vuepress": "^1.4.0"
+  }
+}
