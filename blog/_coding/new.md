@@ -61,6 +61,10 @@ function newOperator(ctor){
 
 3. 对new操作符最后的返回理解错误了，不仅仅是引用对象，如果返回的是函数，也会返回构造函数的返回
 
+### 解析补充
+
+1. 第 4 点解析不足，因为不仅仅是引用类型，当构造函数返回函数时，也会返回这个函数，而不是新创建的对象
+
 ### 其他说明
 
 我看到网上有很多地方在实现过程中手动操作 `__proto__` 这个属性，但事实上在 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 上 `__proto__` 属性介绍的开头就有这么三段警告
