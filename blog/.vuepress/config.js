@@ -9,6 +9,7 @@ module.exports = {
     dateFormat: 'YYYY-MM-DD',
     nav: [
       { text: '编程', link: '/' },
+      { text: '原理解析', link: '/theories/' },
       { text: '工具指南', link: '/tools/' },
       // {
       //   text: '手写实现',
@@ -19,18 +20,25 @@ module.exports = {
     ],
     directories: [
       {
-        id: 'tools',
-        dirname: '_tools',
-        path: '/tools/',
-        title: '工具指南',
-        itemPermalink: '/tools/:slug',
-      },
-      {
         id: 'coding',
         dirname: '_coding',
         path: '/',
         title: '编程',
         itemPermalink: '/coding/:slug',
+      },
+      {
+        id: 'theories',
+        dirname: '_theories',
+        path: '/theories/',
+        title: '原理解析',
+        itemPermalink: '/theories/:slug',
+      },
+      {
+        id: 'tools',
+        dirname: '_tools',
+        path: '/tools/',
+        title: '工具指南',
+        itemPermalink: '/tools/:slug',
       },
     ],
     globalPagination: {
