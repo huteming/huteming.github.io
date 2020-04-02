@@ -4,6 +4,36 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
 
+  plugins: [
+    // 自定义容器: https://v1.vuepress.vuejs.org/zh/guide/markdown.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%B9%E5%99%A8
+    // 自定义容器: 引用
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'right',
+        defaultTitle: ' ',
+      },
+    ],
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'theorem',
+        before: info => `<div class="theorem"><p class="title">${info}</p>`,
+        after: '</div>',
+      },
+    ],
+    // 自定义容器: 状态提示
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'tip',
+        defaultTitle: {
+          '/': '提示',
+        },
+      },
+    ],
+  ],
+
   theme: '@vuepress/theme-blog',
   themeConfig: {
     dateFormat: 'YYYY-MM-DD',
