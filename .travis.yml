@@ -6,7 +6,7 @@ install:
 script:
   - npm run build
   # 如果需要配置自定义域名，在 build 目录下创建 CNAME
-  - echo "huteming.site" > ./blog/.vuepress/dist/CNAME
+  - echo "blog.huteming.site" > ./blog/.vuepress/dist/CNAME
 deploy:
   provider: pages
   skip_cleanup: true
