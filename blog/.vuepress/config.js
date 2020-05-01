@@ -41,6 +41,7 @@ module.exports = {
       { text: '编程', link: '/' },
       { text: '原理解析', link: '/theories/' },
       { text: '工具指南', link: '/tools/' },
+      { text: '算法', link: '/algorithm/' },
       // {
       //   text: '手写实现',
       //   items: [
@@ -49,6 +50,13 @@ module.exports = {
       // }
     ],
     directories: [
+      {
+        id: 'algorithm',
+        dirname: '_algorithm',
+        path: '/algorithm/',
+        title: '算法',
+        itemPermalink: '/algorithm/:slug',
+      },
       {
         id: 'coding',
         dirname: '_coding',
