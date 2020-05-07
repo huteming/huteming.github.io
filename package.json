@@ -18,10 +18,14 @@
   },
   "homepage": "https://github.com/huteming/huteming.github.io#readme",
   "dependencies": {
-    "vuepress": "^1.4.0"
+    "leancloud-storage": "^4.5.3",
+    "valine": "^1.4.14",
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-comment": "^0.7.3"
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "^1.4.1",
+    "@vuepress/plugin-register-components": "^1.4.1",
     "@vuepress/theme-blog": "^2.2.0",
     "vuepress-plugin-container": "^2.1.2"
   }
