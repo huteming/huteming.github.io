@@ -32,6 +32,12 @@ module.exports = {
         },
       },
     ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-139065266-1' // UA-00000000-0
+      }
+    ],
   ],
 
   theme: '@vuepress/theme-blog',
