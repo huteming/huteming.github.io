@@ -41,19 +41,19 @@ module.exports = {
     ],
     // 评论系统 valine
     // https://valine.js.org/vuepress.html
-    [
-      'vuepress-plugin-comment',
-      {
-        choosen: 'valine', 
-        // options选项中的所有参数，会传给Valine的配置
-        options: {
-          el: '#valine-vuepress',
-          appId: 'oPQ3dJVj0Ltg62BaVlONulv3-gzGzoHsz',
-          appKey: 'Fo3CGQAkNSqxmtx8WsHuozdX',
-          visitor: true, // 阅读量统计
-        }
-      }
-    ],
+    // [
+    //   'vuepress-plugin-comment',
+    //   {
+    //     choosen: 'valine', 
+    //     // options选项中的所有参数，会传给Valine的配置
+    //     options: {
+    //       el: '#valine-vuepress',
+    //       appId: 'oPQ3dJVj0Ltg62BaVlONulv3-gzGzoHsz',
+    //       appKey: 'Fo3CGQAkNSqxmtx8WsHuozdX',
+    //       visitor: true, // 阅读量统计
+    //     }
+    //   }
+    // ],
     // 自定义组件
     [
       '@vuepress/register-components',
