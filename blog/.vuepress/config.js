@@ -68,9 +68,10 @@ module.exports = {
     dateFormat: 'YYYY-MM-DD',
     nav: [
       { text: '编程', link: '/' },
+      { text: '算法', link: '/algorithm/' },
+      { text: '知识点', link: '/knowledge/' },
       { text: '原理解析', link: '/theories/' },
       { text: '工具指南', link: '/tools/' },
-      { text: '算法', link: '/algorithm/' }
     ],
     directories: [
       {
@@ -79,6 +80,13 @@ module.exports = {
         path: '/algorithm/',
         title: '算法',
         itemPermalink: '/algorithm/:slug',
+      },
+      {
+        id: 'knowledge',
+        dirname: '_knowledge',
+        path: '/knowledge/',
+        title: '知识点',
+        itemPermalink: '/knowledge/:slug',
       },
       {
         id: 'coding',
