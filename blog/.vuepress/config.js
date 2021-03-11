@@ -114,7 +114,7 @@ module.exports = {
       lengthPerPage: 5,
     },
     sitemap: {
-      hostname: 'https://blog.huteming.site',
+      hostname: 'https://huteming.github.io',
     },
   },
 }
