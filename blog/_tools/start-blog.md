@@ -4,13 +4,13 @@ summary: 快速开始属于你自己的博客
 date: 2020-03-30
 ---
 
-------------------------------------
+---
 
 ### 搭建博客
 
-该博客是利用 VuePress 搭建，[文档在这](https://v1.vuepress.vuejs.org/zh/guide/) 
+该博客是利用 VuePress 搭建，[文档在这](https://v1.vuepress.vuejs.org/zh/guide/)
 
-### github自定义域名配置
+### github 自定义域名配置
 
 1. 在项目的根目录添加 CNAME 文件，其中包含一个顶级域名，像这样：
 
@@ -24,7 +24,7 @@ huteming.site
 
 ![阿里云CNAME解析](/start-blog/cname.png)
 
-3. 最后在github项目中配置 cname 解析，
+3. 最后在 github 项目中配置 cname 解析，
 
 ![github settings](/start-blog/settings.png)
 ![github domain](/start-blog/domain.png)
@@ -33,13 +33,13 @@ huteming.site
 
 1. 在 Github 上创建一个 travis-ci 用的 GitHub Access Token，创建过程可以参考[官方文档](https://help.github.com/cn/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line)
 
-2. 登录 [Travis-CI](https://travis-ci.org/account/repositories) 来同步你的 Github 账号的仓库
+2. 登录 [Travis-CI](https://travis-ci.com/account/repositories) 来同步你的 Github 账号的仓库
 
 3. 启用博客项目
 
 ![travis-ci enable](/start-blog/travis-ci_enable.png)
 
-4. 配置travis-ci
+4. 配置 travis-ci
 
 将刚才创建的 Github Access Token 配置到 travis-ci
 
