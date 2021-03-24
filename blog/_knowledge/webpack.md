@@ -1,6 +1,6 @@
 ---
 title: webpack 基本原理
-summary: BFC的解释和应用
+summary: webpack 基本原理介绍
 date: 2021-03-22
 ---
 
