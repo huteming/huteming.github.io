@@ -66,7 +66,7 @@ module.exports = {
     dateFormat: "YYYY-MM-DD",
     nav: [
       { text: "编程", link: "/" },
-      { text: "react", link: "/react" },
+      { text: "react", link: "/react/" },
       { text: '算法', link: '/algorithm/' },
       { text: "知识点", link: "/knowledge/" },
       // { text: '原理解析', link: '/theories/' },
