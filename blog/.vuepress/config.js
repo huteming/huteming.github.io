@@ -117,7 +117,7 @@ module.exports = {
       },
     ],
     globalPagination: {
-      lengthPerPage: 5,
+      lengthPerPage: 10,
     },
     sitemap: {
       hostname: "https://huteming.github.io",
