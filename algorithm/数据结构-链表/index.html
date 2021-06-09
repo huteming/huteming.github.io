@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>数据结构-链表 | 特明的日志</title>
+    <meta name="description" content="数据结构之链表">
+    <meta name="generator" content="VuePress 1.4.0">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.7f63faaf.css" as="style"><link rel="preload" href="/assets/js/app.f913f9d4.js" as="script"><link rel="preload" href="/assets/js/6.7ebaf463.js" as="script"><link rel="preload" href="/assets/js/4.af9338ed.js" as="script"><link rel="preload" href="/assets/js/18.eced304a.js" as="script"><link rel="prefetch" href="/assets/js/1.2ea39911.js"><link rel="prefetch" href="/assets/js/10.7814a16a.js"><link rel="prefetch" href="/assets/js/11.1a4b8928.js"><link rel="prefetch" href="/assets/js/12.100a1a10.js"><link rel="prefetch" href="/assets/js/13.1ecf7c4a.js"><link rel="prefetch" href="/assets/js/14.cd66458a.js"><link rel="prefetch" href="/assets/js/15.79f54e90.js"><link rel="prefetch" href="/assets/js/16.4ed9d7e2.js"><link rel="prefetch" href="/assets/js/17.99f28218.js"><link rel="prefetch" href="/assets/js/19.6c5626d7.js"><link rel="prefetch" href="/assets/js/20.dc5afa1f.js"><link rel="prefetch" href="/assets/js/21.803e0f31.js"><link rel="prefetch" href="/assets/js/22.e1579b99.js"><link rel="prefetch" href="/assets/js/23.7b413778.js"><link rel="prefetch" href="/assets/js/24.8cfd9c52.js"><link rel="prefetch" href="/assets/js/25.20c14f78.js"><link rel="prefetch" href="/assets/js/26.141777bd.js"><link rel="prefetch" href="/assets/js/27.b706cecf.js"><link rel="prefetch" href="/assets/js/28.3d1f27c4.js"><link rel="prefetch" href="/assets/js/29.7a30e9af.js"><link rel="prefetch" href="/assets/js/30.73b85e87.js"><link rel="prefetch" href="/assets/js/31.623dcf40.js"><link rel="prefetch" href="/assets/js/32.d564fb82.js"><link rel="prefetch" href="/assets/js/33.d7be1f48.js"><link rel="prefetch" href="/assets/js/34.5e0b04a1.js"><link rel="prefetch" href="/assets/js/35.716047e7.js"><link rel="prefetch" href="/assets/js/36.e0001180.js"><link rel="prefetch" href="/assets/js/37.4680380a.js"><link rel="prefetch" href="/assets/js/38.38469638.js"><link rel="prefetch" href="/assets/js/39.b3e32c88.js"><link rel="prefetch" href="/assets/js/40.ed4928ef.js"><link rel="prefetch" href="/assets/js/41.518609f3.js"><link rel="prefetch" href="/assets/js/42.8f3e635e.js"><link rel="prefetch" href="/assets/js/43.ed5ca0b7.js"><link rel="prefetch" href="/assets/js/5.edb5ba7a.js"><link rel="prefetch" href="/assets/js/7.5fd9a5cc.js"><link rel="prefetch" href="/assets/js/8.404a9741.js"><link rel="prefetch" href="/assets/js/9.c1b70d79.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.73fe3575.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7f63faaf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div id="vuepress-theme-blog__global-layout"><section id="header-wrapper"><header id="header"><div class="header-wrapper"><div class="title"><a href="/" class="nav-link home-link">特明的日志 </a></div> <div class="header-right-wrap"><ul class="nav"><li class="nav-item"><a href="/" class="nav-link">编程</a></li><li class="nav-item"><a href="/react/" class="nav-link">react</a></li><li class="nav-item"><a href="/algorithm/" class="nav-link router-link-active">算法</a></li><li class="nav-item"><a href="/knowledge/" class="nav-link">知识点</a></li><li class="nav-item"><a href="/tools/" class="nav-link">工具指南</a></li></ul> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></div></header></section> <div id="mobile-header"><div class="mobile-header-bar"><div class="mobile-header-title"><a href="/" class="nav-link mobile-home-link">特明的日志 </a> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></div> <div class="mobile-menu-wrapper"><hr class="menu-divider"> <ul class="mobile-nav"><li class="mobile-nav-item"><a href="/" class="nav-link">编程</a></li><li class="mobile-nav-item"><a href="/react/" class="nav-link">react</a></li><li class="mobile-nav-item"><a href="/algorithm/" class="nav-link router-link-active">算法</a></li><li class="mobile-nav-item"><a href="/knowledge/" class="nav-link">知识点</a></li><li class="mobile-nav-item"><a href="/tools/" class="nav-link">工具指南</a></li> <li class="mobile-nav-item"><!----></li></ul></div></div></div> <div class="content-wrapper"><div id="vuepress-theme-blog__post-layout"><article itemscope="itemscope" itemtype="https://schema.org/BlogPosting" class="vuepress-blog-theme-content"><header><h1 itemprop="name headline" class="post-title">
+        数据结构-链表
+      </h1> <div class="post-meta"><!----> <div class="post-meta-date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <time pubdate itemprop="datePublished" datetime="2020-05-09T00:00:00.000Z">
+      2020-05-09
+    </time></div> <!----></div></header> <div itemprop="articleBody" class="content__default"><hr> <h2 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h2> <p>链表是一种在物理上非连续、非顺序的数据结构，由若干节点所成。在内存中的存储方式是随机存储。</p> <h3 id="单向链表"><a href="#单向链表" class="header-anchor">#</a> 单向链表</h3> <p>单向链表的每一个节点又包含两部分，一部分是存放数据的变量data，另一部分是指向下一个节点的指针next。</p> <p>链表的第1个节点被称为头节点，最后1个节点被称为尾节点，尾节点的next指 针指向空。</p> <h3 id="双向链表"><a href="#双向链表" class="header-anchor">#</a> 双向链表</h3> <p>双向链表比单向链表稍微复杂一些，它的每一个节点除了拥有data和next指
+针，还拥有指向前置节点的prev指针</p> <h2 id="基本操作"><a href="#基本操作" class="header-anchor">#</a> 基本操作</h2> <h3 id="查找节点"><a href="#查找节点" class="header-anchor">#</a> 查找节点</h3> <p>在查找元素时，链表不像数组那样可以通过下标快速进行定位，只能从头节点
+开始向后一个一个节点逐一查找。</p> <h3 id="更新节点"><a href="#更新节点" class="header-anchor">#</a> 更新节点</h3> <p>如果不考虑查找节点的过程，链表的更新过程会像数组那样简单，直接把旧数
+据替换成新数据即可</p> <h3 id="插入节点"><a href="#插入节点" class="header-anchor">#</a> 插入节点</h3> <h4 id="尾部插入"><a href="#尾部插入" class="header-anchor">#</a> 尾部插入</h4> <p>尾部插入，是最简单的情况，把最后一个节点的next指针指向新插入的节点即 可。</p> <h4 id="头部插入"><a href="#头部插入" class="header-anchor">#</a> 头部插入</h4> <ol><li><p>把新节点的next指针指向原先的头节点。</p></li> <li><p>把新节点变为链表的头节点。</p></li></ol> <h4 id="中间插入"><a href="#中间插入" class="header-anchor">#</a> 中间插入</h4> <ol><li><p>新节点的next指针，指向插入位置的节点。</p></li> <li><p>插入位置前置节点的next指针，指向新节点</p></li></ol> <h3 id="删除元素"><a href="#删除元素" class="header-anchor">#</a> 删除元素</h3> <h4 id="尾部删除"><a href="#尾部删除" class="header-anchor">#</a> 尾部删除</h4> <p>尾部删除，是最简单的情况，把倒数第2个节点的next指针指向空即可</p> <h4 id="头部删除"><a href="#头部删除" class="header-anchor">#</a> 头部删除</h4> <p>头部删除，也很简单，把链表的头节点设为原先头节点的next指针即可</p> <h4 id="中间删除"><a href="#中间删除" class="header-anchor">#</a> 中间删除</h4> <p>中间删除，同样很简单，把要删除节点的前置节点的next指针，指向要删除元 素的下一个节点即可。</p> <h2 id="代码实现"><a href="#代码实现" class="header-anchor">#</a> 代码实现</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data
+    <span class="token keyword">this</span><span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyLink</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>last <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">=</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">insert</span> <span class="token punctuation">(</span><span class="token parameter">data<span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'超出范围'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> node <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    <span class="token keyword">const</span> size <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size
+    <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token operator">++</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> node
+      <span class="token keyword">this</span><span class="token punctuation">.</span>last <span class="token operator">=</span> node
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 头部插入</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      node<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head
+      <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> node
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 尾部插入</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>last<span class="token punctuation">.</span>next <span class="token operator">=</span> node
+      <span class="token keyword">this</span><span class="token punctuation">.</span>last <span class="token operator">=</span> node
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 中间插入</span>
+    <span class="token keyword">const</span> prevNode <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    node<span class="token punctuation">.</span>next <span class="token operator">=</span> prevNode<span class="token punctuation">.</span>next
+    prevNode<span class="token punctuation">.</span>next <span class="token operator">=</span> node
+  <span class="token punctuation">}</span>
+
+  <span class="token function">destroy</span> <span class="token punctuation">(</span><span class="token parameter">index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> size <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size
+    <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token operator">--</span>
+    <span class="token comment">// 删除头部</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>head <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">.</span>next
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 删除尾部</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> prevNode <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      prevNode<span class="token punctuation">.</span>next <span class="token operator">=</span> <span class="token keyword">null</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>last <span class="token operator">=</span> prevNode
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 删除中间节点</span>
+    <span class="token keyword">const</span> prevNode <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    prevNode<span class="token punctuation">.</span>next <span class="token operator">=</span> prevNode<span class="token punctuation">.</span>next<span class="token punctuation">.</span>next
+  <span class="token punctuation">}</span>
+
+  <span class="token function">update</span> <span class="token punctuation">(</span><span class="token parameter">index<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'超出范围'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 更新头部</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>head<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 更新尾部</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">===</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>last<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+      <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> currentNode <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span>
+    currentNode<span class="token punctuation">.</span>data <span class="token operator">=</span> data
+  <span class="token punctuation">}</span>
+
+  <span class="token function">find</span> <span class="token punctuation">(</span><span class="token parameter">index</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> index <span class="token operator">&gt;=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> result <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> index<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result <span class="token operator">=</span> result<span class="token punctuation">.</span>next
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> result
+  <span class="token punctuation">}</span>
+
+  <span class="token function">output</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>size <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">''</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">let</span> current <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>head
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+      current <span class="token operator">=</span> current<span class="token punctuation">.</span>next
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">', '</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="优势-劣势"><a href="#优势-劣势" class="header-anchor">#</a> 优势 &amp; 劣势</h2> <p><img src="/algorithm/link.png" alt="数组和链表对比"></p> <h3 id="优势"><a href="#优势" class="header-anchor">#</a> 优势</h3> <p>链表的优势在于能够灵活地进行插入和删除操作，如果需要在尾部频繁插入、删除元素，用链表更合适一些。</p> <h3 id="劣势"><a href="#劣势" class="header-anchor">#</a> 劣势</h3> <p>链表的劣势在于查找过程相对数组来说会更加耗时</p></div> <footer><!----> <hr> <!----></footer></article> <div class="sticker vuepress-toc"><div class="vuepress-toc-item vuepress-toc-h2 active"><a href="#特点" title="特点">特点</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#单向链表" title="单向链表">单向链表</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#双向链表" title="双向链表">双向链表</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#基本操作" title="基本操作">基本操作</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#查找节点" title="查找节点">查找节点</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#更新节点" title="更新节点">更新节点</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#插入节点" title="插入节点">插入节点</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#删除元素" title="删除元素">删除元素</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#代码实现" title="代码实现">代码实现</a></div><div class="vuepress-toc-item vuepress-toc-h2"><a href="#优势-劣势" title="优势 &amp; 劣势">优势 &amp; 劣势</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#优势" title="优势">优势</a></div><div class="vuepress-toc-item vuepress-toc-h3"><a href="#劣势" title="劣势">劣势</a></div></div></div></div> <footer class="footer" data-v-fdbf4940><div class="footer-left-wrap" data-v-fdbf4940><ul class="contact" data-v-fdbf4940></ul></div> <div class="footer-right-wrap" data-v-fdbf4940><ul class="copyright" data-v-fdbf4940></ul></div></footer></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.f913f9d4.js" defer></script><script src="/assets/js/6.7ebaf463.js" defer></script><script src="/assets/js/4.af9338ed.js" defer></script><script src="/assets/js/18.eced304a.js" defer></script>
+  </body>
+</html>
