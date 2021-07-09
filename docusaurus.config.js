@@ -111,6 +111,7 @@ module.exports = {
             require.resolve('./src/css/index.scss'),
             require.resolve('./src/css/showcase.scss'),
             require.resolve('./src/css/versions.scss'),
+            // require.resolve('./src/css/custom.css'),
           ],
         },
       },
