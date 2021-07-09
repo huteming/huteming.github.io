@@ -97,6 +97,8 @@ module.exports = {
         docs: false,
         blog: {
           routeBasePath: '/',
+          blogSidebarCount: 'ALL',
+          blogSidebarTitle: 'All Blog Posts',
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
