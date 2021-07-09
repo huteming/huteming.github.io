@@ -15,10 +15,10 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: '特明的日志',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+      // logo: {
+      //   alt: 'My Site Logo',
+      //   src: 'img/logo.png',
+      // },
       style: 'dark',
       items: [
         // {
