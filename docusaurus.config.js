@@ -4,7 +4,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: '特明的日志',
-  tagline: 'Dinosaurs are cool',
+  // tagline: 'Dinosaurs are cool',
   url: 'https://huteming.github.io', // 您的网站网址
   baseUrl: '/',
   onBrokenLinks: 'throw',
