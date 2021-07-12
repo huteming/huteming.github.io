@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://huteming.github.io/en/</id>
+    <title>特明的日志 Blog</title>
+    <updated>2021-07-09T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://huteming.github.io/en/"/>
+    <subtitle>特明的日志 Blog</subtitle>
+    <icon>https://huteming.github.io/en/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[script 标签的 async 和 defer 属性]]></title>
+        <id>script 标签的 async 和 defer 属性</id>
+        <link href="https://huteming.github.io/en/2021/07/09/script 中的 async 和 defer 属性"/>
+        <updated>2021-07-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[我们都知道，浏览器解析 HTML 是一行一行按照顺序向后读取的，在传统的写法中，当浏览器读到 ` 时，便会暂停解析 DOM，同时立即开始下载  中定义的资源，并在下载完成后立刻执行。由于这样的特性，可能会造成 DOM 树在还没有完全解析时就开始执行 JavaScript，需要操作 DOM 的程序可能因此无法正确执行，从而造成许多问题；或是由于 ` 中的资源下载、执行时间过程，用户会卡在白画面，并会产生觉得网站太慢不好用之类的体验。]]></summary>
+    </entry>
+</feed>

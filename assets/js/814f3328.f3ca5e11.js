@@ -1,0 +1,1 @@
+(self.webpackChunkhuteming_github_io=self.webpackChunkhuteming_github_io||[]).push([[535],{6353:function(e){"use strict";e.exports=JSON.parse('{"title":"All Blog Posts","items":[{"title":"script \u6807\u7b7e\u7684 async \u548c defer \u5c5e\u6027","permalink":"/2021/07/09/script \u4e2d\u7684 async \u548c defer \u5c5e\u6027"}]}')}}]);
