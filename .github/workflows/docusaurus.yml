@@ -1,10 +1,10 @@
-name: documentation
+name: docusaurus
 
 on:
   pull_request:
-    branches: [documentation]
+    branches: [docusaurus]
   push:
-    branches: [documentation]
+    branches: [docusaurus]
 
 jobs:
   checks:
