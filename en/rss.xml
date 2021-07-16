@@ -4,9 +4,44 @@
         <title>特明的日志 Blog</title>
         <link>https://huteming.github.io/en/</link>
         <description>特明的日志 Blog</description>
-        <lastBuildDate>Fri, 09 Jul 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 16 Jul 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[React 生命周期]]></title>
+            <link>https://huteming.github.io/en/2021/07/16/React 生命周期</link>
+            <guid>React 生命周期</guid>
+            <pubDate>Fri, 16 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[这里来记录下 React 的几个阶段的生命周期钩子。不过，看官方的文档可能来的更加直接。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[typeof、instanceof、toString区别]]></title>
+            <link>https://huteming.github.io/en/2021/07/15/typeof、instanceof、toString区别</link>
+            <guid>typeof、instanceof、toString区别</guid>
+            <pubDate>Thu, 15 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[typeof、instanceof、Object.prototype.toString 三个方法都可以被用来判断数据类型，]]></description>
+        </item>
+        <item>
+            <title><![CDATA[css设置垂直居中]]></title>
+            <link>https://huteming.github.io/en/2021/07/14/css设置垂直居中</link>
+            <guid>css设置垂直居中</guid>
+            <pubDate>Wed, 14 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[css 设置垂直居中方法总结]]></description>
+        </item>
+        <item>
+            <title><![CDATA[css加载会造成阻塞吗]]></title>
+            <link>https://huteming.github.io/en/2021/07/13/css加载会造成阻塞吗</link>
+            <guid>css加载会造成阻塞吗</guid>
+            <pubDate>Tue, 13 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[总所周知，js 执行会阻塞 DOM 树的解析和渲染。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[prettier 和 eslint 的集成]]></title>
+            <link>https://huteming.github.io/en/2021/07/12/prettier 与 eslint 的集成</link>
+            <guid>prettier 和 eslint 的集成</guid>
+            <pubDate>Mon, 12 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[聊聊 prettier 与 eslint 的区别，以及它们同时使用时该如何配置。]]></description>
+        </item>
         <item>
             <title><![CDATA[script 标签的 async 和 defer 属性]]></title>
             <link>https://huteming.github.io/en/2021/07/09/script 中的 async 和 defer 属性</link>
