@@ -12,7 +12,7 @@
   --tintColor: #f7f7f7;
   --rn-note-background: rgba(255, 229, 100, 0.25);
   --ifm-font-size-base: 17px;
-  --ifm-spacing-horizontal: 16px;
+  --ifm-spacing-horizontal: 10px; // 为了加宽右侧栏宽度，从 16 => 10
   --ifm-navbar-item-padding-horizontal: 20px;
   --ifm-menu-link-padding-horizontal: 0;
   --ifm-toc-padding-vertical: 6px;
@@ -27,7 +27,7 @@
   --ifm-transition-slow: 0;
   --ifm-pre-line-height: 1.5;
   --ifm-tabs-padding-vertical: 6px;
-  --ifm-color-warning: #ffe564;
+  // --ifm-color-warning: #ffe564;
   // --ifm-alert-border-width: 0;
   // --ifm-alert-border-radius: 0;
   // --ifm-alert-color: var(--ifm-font-color-base);
@@ -302,15 +302,15 @@ html[data-theme='dark'] article .badge {
   color: var(--ifm-font-color-base);
 }
 
-.alert--warning {
-  background-color: var(--rn-note-background);
-  font-size: 14px;
-  text-align: center;
+// .alert--warning {
+//   background-color: var(--rn-note-background);
+//   font-size: 14px;
+//   text-align: center;
 
-  .margin-top--md {
-    margin-top: 0.33rem !important;
-  }
-}
+//   .margin-top--md {
+//     margin-top: 0.33rem !important;
+//   }
+// }
 
 /* Home page */
 
