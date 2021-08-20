@@ -1,0 +1,136 @@
+---
+title: 文本换行
+tags: [css]
+---
+
+import SampleWhiteSpace from '../src/components/SampleWhiteSpace'
+
+`white-space`、`word-break`、`overflow-wrap(word-wrap)` 三个属性整理
+
+<!--truncate-->
+
+## 演示代码
+
+<!-- 来自于 SampleWhiteSpace 中的 html, 修改时注意同步 -->
+<!-- prettier-ignore -->
+```html
+<div id="box">
+  Hi&nbsp;&nbsp;,
+  This   is a incomprehensibilities long word.
+  <br />
+  <br />
+  你好&nbsp;&nbsp;,
+  这   是一个空格分割的长单词
+  <br />
+  <br />
+  你好&nbsp;&nbsp;,
+  这---是一个短横线分割的长单词
+  <br />
+  <br />
+  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+</div>
+```
+
+## 1. white-space
+
+这个属性是用来**控制空白字符的显示的**，同时还能控制是否自动换行。它有五个值:
+
+`normal` | `nowrap` | `pre` | `pre-wrap` | `pre-line`
+
+默认是 `normal`
+
+### 1.1 white-space: nowrap
+
+![white-space:nowrap](/img/blog/white-space/whiteSpace-nowrap.png)
+
+不仅空格被合并，换行符无效，连原本的自动换行都没了！只有`<br>`才能导致换行！所以这个值的表现还是挺简单的，我们可以理解为`永不换行`。
+
+### 1.2 white-space: pre
+
+![white-space:pre](/img/blog/white-space/whiteSpace-pre.png)
+
+空格和换行符全都被保留了下来！`不过自动换行是没了`。保留，所以`pre`其实是`preserve`的缩写，这样就好记了。
+
+### 1.3 white-space: pre-wrap
+
+![white-space:pre-wrap](/img/blog/white-space/whiteSpace-preWrap.png)
+
+显然`pre-wrap`就是`preserve` + `wrap`，保留空格和换行符，且可以自动换行。
+
+### 1.4 white-space: pre-line
+
+![white-space:pre-line](/img/blog/white-space/whiteSpace-preLine.png)
+
+空格被合并了，但是换行符可以发挥作用，`pre-line` 应该是 `preserve new lines without spaces`
+
+### 1.5 属性对比
+
+| 属性     | 换行符 | 空格      | 自动换行 | nbsp |
+| -------- | ------ | --------- | -------- | ---- |
+| normal   | ×      | ×（合并） | √        | √    |
+| nowrap   | ×      | ×（合并） | ×        | √    |
+| pre      | √      | √         | ×        | √    |
+| pre-wrap | √      | √         | √        | √    |
+| pre-line | √      | ×（合并） | √        | √    |
+
+## 2. word-break
+
+这个属性是**控制单词如何被拆分换行**的。它有三个值：
+
+`normal` 、`break-all` 、`keep-all`
+
+### 2.1 word-break: keep-all
+
+![word-break](/img/blog/white-space/wordBreak-keepAll.png)
+
+**所有“单词”一律不拆分换行**。
+
+注意，我这里的“单词”包括连续的中文字符（还有日文、韩文等），或者可以理解为只有**空格或连字符 - 时拆分单词**可以触发自动换行
+
+### 2.2 word-break: break-all
+
+![word-break](/img/blog/white-space/wordBreak-breakAll.png)
+
+**所有单词碰到边界一律拆分换行**。
+
+不管你是 incomprehensibilities 这样一行都显示不下的单词，还是 long 这样很短的单词，只要碰到边界，都会被强制拆分换行。
+
+所以用 word-break:break-all 时要慎重呀
+
+## 3. overflow-wrap
+
+`overflow-wrap` 也叫做 `word-wrap`
+
+:::tip MDN 注
+`word-wrap` 属性原本属于微软的一个私有属性，在 CSS3 现在的文本规范草案中已经被重名为 `overflow-wrap` 。
+
+`word-wrap` 现在被当作 `overflow-wrap` 的 “别名”。 稳定的谷歌 Chrome 和 Opera 浏览器版本支持这种新语法。
+:::
+
+**这个属性也是控制单词如何被拆分换行的**，实际上是作为`word-break`的互补，它只有两个值：
+
+`normal` | `break-word`
+
+### 3.1 overflow-wrap: break-word
+
+![word-break](/img/blog/white-space/overflowWrap-breakWord.png)
+
+只有**当一个单词一整行都显示不下时，才会拆分换行该单词**。
+
+overflow，只有长到溢出的单词才会被强制拆分换行！
+
+## 总结
+
+最后总结一下三个属性
+
+- white-space，**控制空白字符的显示**，同时还能控制是否自动换行。它有五个值: `normal` | `nowrap` | `pre` | `pre-wrap` | `pre-line`
+
+- word-break，**控制单词如何被拆分换行**。它有三个值: `normal` | `break-all` | `keep-all`
+
+- overflow-wrap（word-wrap）**控制长度超过一行的单词是否被拆分换行**，是`word-break`的补充，它有两个值: `normal` | `break-word`
+
+## 在线演示
+
+[codesandbox 演示地址](https://codesandbox.io/s/yan-zheng-white-space-36xsq?file=/src/App.js)
+
+<SampleWhiteSpace />
