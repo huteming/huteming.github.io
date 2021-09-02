@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huteming.github.io/en/</id>
     <title>特明的日志 Blog</title>
-    <updated>2021-08-20T00:00:00.000Z</updated>
+    <updated>2021-08-23T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huteming.github.io/en/"/>
     <subtitle>特明的日志 Blog</subtitle>
     <icon>https://huteming.github.io/en/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[axios 源码解析]]></title>
+        <id>axios 源码解析</id>
+        <link href="https://huteming.github.io/en/2021/08/23/axios源码解析"/>
+        <updated>2021-08-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[axios 源码中几个关键点的解析。版本号 v0.21.1]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[文本换行]]></title>
         <id>文本换行</id>

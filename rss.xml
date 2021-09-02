@@ -4,9 +4,16 @@
         <title>特明的日志 Blog</title>
         <link>https://huteming.github.io/</link>
         <description>特明的日志 Blog</description>
-        <lastBuildDate>Fri, 20 Aug 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Aug 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[axios 源码解析]]></title>
+            <link>https://huteming.github.io/2021/08/23/axios源码解析</link>
+            <guid>axios 源码解析</guid>
+            <pubDate>Mon, 23 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[axios 源码中几个关键点的解析。版本号 v0.21.1]]></description>
+        </item>
         <item>
             <title><![CDATA[文本换行]]></title>
             <link>https://huteming.github.io/2021/08/20/文本换行</link>
