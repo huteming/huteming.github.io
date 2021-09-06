@@ -1,5 +1,5 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -112,6 +112,7 @@ module.exports = {
             require.resolve('./src/css/index.scss'),
             require.resolve('./src/css/showcase.scss'),
             require.resolve('./src/css/versions.scss'),
+            require.resolve('./src/css/atom.scss'),
             // require.resolve('./src/css/custom.css'),
           ],
         },
@@ -135,4 +136,4 @@ module.exports = {
       },
     },
   },
-}
+};

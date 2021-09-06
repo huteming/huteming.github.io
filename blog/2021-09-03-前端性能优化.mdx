@@ -3,13 +3,17 @@ title: 前端性能优化
 tags: [性能优化]
 ---
 
+import Subtitle from '../src/components/Subtitle';
+
 记录一下前端性能优化的一些方式。
 
 <!--truncate-->
 
 ## 构建打点
 
-**[speed-measure-webpack-plugin](https://www.npmjs.com/package/speed-measure-webpack-plugin)**
+<Subtitle href="https://www.npmjs.com/package/speed-measure-webpack-plugin">
+  speed-measure-webpack-plugin
+</Subtitle>
 
 它能够测量出在你的构建过程中，每一个 Loader 和 Plugin 的执行时长，官方给出的效果图是下面这样：
 
@@ -17,19 +21,25 @@ tags: [性能优化]
 
 ## 构建阶段
 
-四个大方向入手：缓存、多核、抽离以及拆分
+几个大方向入手：缓存、多核、抽离以及拆分
 
 ### 缓存
 
-**[babel-loader](https://www.npmjs.com/package/babel-loader)**
+<Subtitle href="https://www.npmjs.com/package/babel-loader">
+  babel-loader
+</Subtitle>
 
 将 `loader` 的编译结果写入硬盘缓存，再次构建如果文件没有发生变化则会直接拉取缓存。可以通过设置 `cacheDirectory` 来开启缓存。
 
-**[cache-loader](https://www.npmjs.com/package/cache-loader)**
+<Subtitle href="https://www.npmjs.com/package/cache-loader">
+  cache-loader
+</Subtitle>
 
 它所做的事情，就是 babel-loader 开启 cache 后做的事情
 
-**[uglifyjs-webpack-plugin](https://www.npmjs.com/package/uglifyjs-webpack-plugin)**
+<Subtitle href="https://www.npmjs.com/package/uglifyjs-webpack-plugin">
+  uglifyjs-webpack-plugin
+</Subtitle>
 
 代码压缩阶段，也可以通过缓存解决大部分问题。我们可以通过开启 `cache` 配置开启我们的缓存功能，也可以通过开启 `parallel` 开启多核编译功能。
 
@@ -50,7 +60,7 @@ module.exports = {
 
 ### 多核构建
 
-**[happypack](https://www.npmjs.com/package/happypack)**
+<Subtitle href="https://www.npmjs.com/package/happypack">happypack</Subtitle>
 
 其实对于一些编译代价昂贵的 `webpack` 插件，一般都会提供 `parallel` 这样的配置项供你开启多核编译。所以也不一定是需要 `happypack`，这就需要我们多去看看官网了
 
@@ -110,7 +120,7 @@ module.exports = {
 
 ### 拆分
 
-**入口拆分**
+<Subtitle>入口拆分</Subtitle>
 
 在一个多页应用中，有多个 `entry` 的前提下，有时候我们只是更改了一个 `entry` 下的文件，但是却要对所有 `entry` 执行一遍构建，优化方案
 
@@ -126,15 +136,63 @@ module.exports = {
 
 :::
 
+<Subtitle>模块拆分</Subtitle>
+
+在 Webpack4 中移除了我们此前常用的 `CommonsChunkPlugin` 插件，取而代之的是 `splitChunks` 。 `splitChunks` 的默认配置已经足够我们日常使用，没有特殊需求可以不必特意处理。 我们此处的配置如下（生产环境）：
+
+```js
+optimization: {
+    splitChunks: {
+        cacheGroups: {
+            commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all'
+            },
+            // 可能会增加构建时间
+            // styles: {
+            //     name: 'index',
+            //     test: /.stylus|css$/,
+            //     chunks: 'all',
+            //     enforce: true
+            // }
+        }
+    }
+}
+```
+
+其中，commons 部分的作用是分离出 node_modules 中引入的模块，styles 部分则是合并 CSS 文件。
+
+### 优化模块查找路径
+
+Node.js 的模块的载入及缓存机制如下：
+
+载入内置模块 载入文件模块 载入文件目录模块 载入 node_modules 里的模块 自动缓存已载入模块 如果模块名不是路径，也不是内置模块，Node 将试图去当前目录的 node_modules 文件夹里搜索。如果当前目录的 node_modules 里没有找到，Node 会从父目录的 node_modules 里搜索，这样递归下去直到根目录。
+
+我们可以对搜索过程进行一些优化，比如可以像下面这样指定路径：
+
+```js
+exclude: /node_modules/, // 排除不处理的目录
+include: path.resolve(__dirname, 'src') // 精确指定要处理的目录
+resolve: {
+    modules: [path.resolve(__dirname, 'node_modules')], // 指定node_modules的位置
+    alias: {
+        'api': resolve('src/api') // 创建别名
+    }
+}
+```
+
 ## 构建分析
 
-**输出 Webpack 构建信息的.json 文件**
+<Subtitle>输出 Webpack 构建信息的.json 文件</Subtitle>
 
 ```cli
 webpack --profile --json > stats.json
 ```
 
-**web 可视化查看构建分析**
+<Subtitle>web 可视化查看构建分析</Subtitle>
+
+有两种方式：
 
 1. 通过可视化分析工具，是个在线 Web 应用，上传 stats.json 文件就可以
 
@@ -142,23 +200,69 @@ webpack --profile --json > stats.json
 
 - [Webpack Chart](http://alexkuz.github.io/webpack-chart/)
 
-2. 安装[Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
+2. 使用插件 [Webpack Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
+
+## 开发阶段
+
+### 长列表
+
+<Subtitle>懒渲染</Subtitle>
+
+懒渲染就是大家平常说的无限滚动，指的就是在滚动到页面底部的时候，再去加载剩余的数据。
+
+这是一种前后端共同优化的方式，后端一次加载比较少的数据可以节省流量，前端首次渲染更少的数据速度会更快。
+
+<Subtitle>可视区域渲染</Subtitle>
+
+可视区域渲染指的是只渲染可视区域的列表项，非可见区域的完全不渲染，在滚动条滚动时动态更新列表项。
+
+### 图片懒加载
+
+<Subtitle>浏览器原生支持懒加载</Subtitle>
+
+使用方式
+
+```html
+<img src="./example.jpg" loading="lazy" />
+```
+
+只是浏览器的支持有些……
+
+![image-lazyload](/img/blog/image-lazyload.jpg)
+
+<Subtitle>其他方式检测图片是否进入可是区域</Subtitle>
+
+实现方式如：`IntersectionObserver` 、 `onScroll` 等等
+
+### 资源预加载
+
+<Subtitle>preload 和 prefetch</Subtitle>
+
+- preload 是告诉浏览器页面**必定**需要的资源，浏览器**一定会**加载这些资源。
+
+- prefetch 是告诉浏览器页面**可能**需要的资源，浏览器**不一定会**加载这些资源。
 
 ## 其他
 
-**[progress-bar-webpack-plugin](https://www.npmjs.com/package/progress-bar-webpack-plugin)**
+<Subtitle href="https://www.npmjs.com/package/progress-bar-webpack-plugin">
+  progress-bar-webpack-plugin
+</Subtitle>
 
 能为你展示构建进度的 Plugin。效果图：
 
 ![progress-bar-webpack-plugin](/img/blog/webpack/progress-bar-webpack-plugin.webp)
 
-**[webpack-build-notifier](https://www.npmjs.com/package/webpack-build-notifier)**
+<Subtitle href="https://www.npmjs.com/package/webpack-build-notifier">
+  webpack-build-notifier
+</Subtitle>
 
 在你构建完成时，能够像微信、Lark 这样的 APP 弹出消息的方式，提示你构建已经完成了。效果图：
 
 ![webpack-build-notifier](/img/blog/webpack/webpack-build-notifier.webp)
 
-**[webpack-dashboard](https://www.npmjs.com/package/webpack-dashboard)**
+<Subtitle href="https://www.npmjs.com/package/webpack-dashboard">
+  webpack-dashboard
+</Subtitle>
 
 如果你对 webpack 原始的构建输出不满意的话，也可以使用这样一款 Plugin 来优化你的输出界面。效果图
 
