@@ -1,9 +1,9 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: '特明的日志',
+  title: '特明',
   // tagline: 'Dinosaurs are cool',
   url: 'https://huteming.github.io', // 您的网站网址
   baseUrl: '/',
@@ -15,7 +15,7 @@ module.exports = {
   trailingSlash: false,
   themeConfig: {
     navbar: {
-      title: '特明的日志',
+      title: '特明的笔记',
       // logo: {
       //   alt: 'My Site Logo',
       //   src: 'img/logo.png',
@@ -136,4 +136,4 @@ module.exports = {
       },
     },
   },
-};
+}
