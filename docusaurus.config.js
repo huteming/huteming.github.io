@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 module.exports = {
   title: '特明',
   // tagline: 'Dinosaurs are cool',
-  url: 'https://huteming.github.io', // 您的网站网址
+  url: process.env.URL || 'https://huteming.github.io', // 您的网站网址
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
