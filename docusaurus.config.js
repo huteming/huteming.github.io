@@ -125,16 +125,16 @@ module.exports = {
   // https://github.com/facebook/docusaurus/tree/master/packages/docusaurus-theme-classic/codeTranslations
   i18n: {
     defaultLocale: 'zh-Hans',
-    locales: ['en', 'zh-Hans'],
-    localeConfigs: {
-      en: {
-        label: 'English',
-        direction: 'ltr',
-      },
-      'zh-Hans': {
-        label: '中文（中国）',
-        direction: 'ltr',
-      },
-    },
+    locales: ['zh-Hans'],
+    // localeConfigs: {
+    //   en: {
+    //     label: 'English',
+    //     direction: 'ltr',
+    //   },
+    //   'zh-Hans': {
+    //     label: '中文（中国）',
+    //     direction: 'ltr',
+    //   },
+    // },
   },
 }
