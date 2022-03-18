@@ -1,10 +1,10 @@
-name: docusaurus
+name: docusaurus--del
 
 on:
   pull_request:
-    branches: [docusaurus]
+    branches: [docusaurus--del]
   push:
-    branches: [docusaurus]
+    branches: [docusaurus--del]
 
 jobs:
   checks:
