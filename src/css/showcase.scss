@@ -1,4 +1,4 @@
-@import "shared";
+@import 'shared';
 
 .showcaseSection {
   max-width: 800px;
@@ -36,7 +36,7 @@
   }
 }
 
-html[data-theme="dark"] .showcaseSection {
+html[data-theme='dark'] .showcaseSection {
   p a {
     @extend %link-style-dark;
   }

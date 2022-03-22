@@ -14,7 +14,7 @@
     sans-serif;
   --ifm-color-primary: #06bcee;
   --ifm-font-size-base: 17px;
-  --ifm-spacing-horizontal: 10px; // ???为了加宽右侧栏宽度，从 16 => 10
+  --ifm-spacing-horizontal: 16px;
   --ifm-navbar-item-padding-horizontal: 18px;
   --ifm-menu-link-padding-horizontal: 0;
   --ifm-toc-padding-vertical: 6px;
@@ -104,8 +104,7 @@ html[data-theme='dark'] {
   max-width: 1400px;
   width: 1400px;
   align-self: center;
-  // ???该属性显示中文是很奇怪
-  // font-weight: 300;
+  font-weight: 300;
 
   div[class*='docPage'] {
     justify-content: center;

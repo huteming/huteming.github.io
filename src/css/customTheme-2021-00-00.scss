@@ -1,6 +1,7 @@
 @import 'shared';
 
 :root {
+  --ifm-color-primary: #06bcee;
   --brand: #61dafb;
   --dark: #282c34;
   --deepdark: #20232a;
@@ -10,19 +11,15 @@
   --divider: #ececec;
   --tintColor: #f7f7f7;
   --rn-note-background: rgba(255, 229, 100, 0.25);
-  --ifm-font-family-base: 'Optimistic Display', system-ui, -apple-system,
-    sans-serif;
-  --ifm-color-primary: #06bcee;
   --ifm-font-size-base: 17px;
-  --ifm-spacing-horizontal: 10px; // ???为了加宽右侧栏宽度，从 16 => 10
-  --ifm-navbar-item-padding-horizontal: 18px;
+  --ifm-spacing-horizontal: 10px; // 为了加宽右侧栏宽度，从 16 => 10
+  --ifm-navbar-item-padding-horizontal: 20px;
   --ifm-menu-link-padding-horizontal: 0;
   --ifm-toc-padding-vertical: 6px;
   --ifm-toc-link-color: var(--ifm-color-emphasis-700);
   --ifm-code-font-size: 90%;
   --ifm-code-border-radius: 3px;
   --ifm-blockquote-color: var(--ifm-font-color-base);
-  --ifm-blockquote-font-size: 16px;
   --ifm-table-head-color: var(--subtle);
   --ifm-link-hover-decoration: none;
   --ifm-navbar-background-color: var(--deepdark);
@@ -30,24 +27,19 @@
   --ifm-transition-slow: 0;
   --ifm-pre-line-height: 1.5;
   --ifm-tabs-padding-vertical: 6px;
-  --ifm-color-warning: #ffe564;
-  --ifm-alert-border-width: 0;
-  --ifm-alert-border-radius: 0;
-  --ifm-alert-color: var(--ifm-font-color-base);
+  // --ifm-color-warning: #ffe564;
+  // --ifm-alert-border-width: 0;
+  // --ifm-alert-border-radius: 0;
+  // --ifm-alert-color: var(--ifm-font-color-base);
   --ifm-pagination-nav-color-hover: var(--ifm-color-emphasis-300);
+  --ifm-navbar-sidebar-width: 66%;
   --doc-sidebar-width: 100%;
   --ifm-table-border-width: 0.005rem;
-  --ifm-navbar-sidebar-width: 100%;
-
-  @media (min-width: 340px) {
-    --ifm-navbar-sidebar-width: 340px;
-  }
 }
 
 html[data-theme='light'] {
   --ifm-code-background: rgba(0, 0, 0, 0.06);
   --docsearch-container-background: rgba(32, 35, 42, 0.6);
-  --ifm-link-color: #357da1;
 }
 
 html[data-theme='dark'] {
@@ -68,57 +60,15 @@ html[data-theme='dark'] {
   }
 }
 
-::marker {
-  color: var(--ifm-font-color-secondary);
-}
-
-/* Font */
-
-@font-face {
-  font-family: 'Optimistic Display';
-  src: url('https://facebookmicrosites.github.io/design/public/fonts/OptimisticDisplayLight-199be98cf48e5b4c688356b08a02362c.woff2')
-    format('woff2');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Optimistic Display';
-  src: url('https://facebookmicrosites.github.io/design/public/fonts/OptimisticDisplayRegular-b0e4e99f91efd0021c3ab8e4df0e6e1b.woff2')
-    format('woff2');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Optimistic Display';
-  src: url('https://facebookmicrosites.github.io/design/public/fonts/OptimisticDisplayBold-3a50548145f36de582c3b36d9626f4d6.woff2')
-    format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
 /* Content */
 
 .main-wrapper {
   max-width: 1400px;
   width: 1400px;
   align-self: center;
-  // ???该属性显示中文是很奇怪
-  // font-weight: 300;
-
-  div[class*='docPage'] {
-    justify-content: center;
-  }
 
   h1[class^='docTitle'] {
     font-size: 2.8rem;
-  }
-
-  .admonition-content {
-    a {
-      text-decoration: none;
-    }
   }
 }
 
@@ -135,13 +85,22 @@ main[class^='docMainContainer'] > .container {
 
 @media (max-width: 1320px) and (min-width: 997px) {
   .container {
-    max-width: calc(var(--ifm-container-width) - var(--doc-sidebar-width) / 2);
+    max-width: calc(
+      var(--ifm-container-width) - 125px - var(--ifm-spacing-horizontal) * 2
+    );
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: auto !important;
   }
 }
 
 @media (min-width: 997px) {
   main[class^='docMainContainer'] {
-    max-width: calc(100% - var(--doc-sidebar-width) + 44px);
+    width: calc(100% - var(--doc-sidebar-width));
+    display: contents;
   }
 }
 
@@ -208,7 +167,7 @@ hr {
     }
 
     tr td {
-      font-size: 90%;
+      font-size: 14px;
       line-height: 1.3em;
       padding: 10px;
       text-align: left;
@@ -236,27 +195,6 @@ hr {
     .widerColumn {
       width: 180px;
     }
-
-    .table-heading {
-      font-weight: var(--ifm-table-head-font-weight);
-      border-bottom: 2px solid var(--ifm-table-border-color);
-    }
-
-    div[class^='codeBlockContainer'] {
-      &,
-      & pre {
-        margin-bottom: 0;
-      }
-
-      pre code {
-        padding: 12px 16px;
-        white-space: break-spaces;
-      }
-
-      button {
-        display: none;
-      }
-    }
   }
 
   figure {
@@ -276,11 +214,6 @@ hr {
 
   .docusaurus-highlight-code-line {
     background-color: var(--light);
-  }
-
-  div[class^='codeBlockContent'] {
-    display: inline-grid;
-    min-width: 100%;
   }
 
   div[class^='codeBlockLines'] {
@@ -369,32 +302,21 @@ html[data-theme='dark'] article .badge {
   color: var(--ifm-font-color-base);
 }
 
-.alert--warning {
-  background-color: var(--rn-note-background);
-  font-size: 14px;
-  text-align: center;
+// .alert--warning {
+//   background-color: var(--rn-note-background);
+//   font-size: 14px;
+//   text-align: center;
 
-  .margin-top--md {
-    margin-top: 0.33rem !important;
-  }
-}
-
-.admonition {
-  text-align: left;
-  font-size: var(--ifm-blockquote-font-size);
-  line-height: var(--ifm-pre-line-height);
-
-  h5 {
-    font-size: 14px;
-  }
-}
+//   .margin-top--md {
+//     margin-top: 0.33rem !important;
+//   }
+// }
 
 /* Home page */
 
 .homepage {
   div[class^='codeBlockContainer'] {
     margin-bottom: 0;
-    overflow: visible;
 
     .prism-code {
       font-size: 90%;
@@ -420,6 +342,10 @@ html[data-theme='dark'] article .badge {
     font-size: 1.5rem;
     margin-top: 16px;
     display: inline-block;
+  }
+
+  .container--fluid > div {
+    padding-top: 0 !important;
   }
 
   .row .col p a {
@@ -452,15 +378,9 @@ html[data-theme='dark'] .community-page {
 
 /* Version warning */
 
-.theme-doc-version-banner.alert--warning {
-  background-color: rgba(100, 215, 255, 0.3);
-  border-style: none;
-  color: var(--ifm-font-color-base);
-  box-shadow: none;
-  a {
-    color: var(--ifm-font-color-base) !important;
-    text-decoration: underline !important;
-    text-decoration-thickness: 1px !important;
+div[class*='docs-wrapper'] .row .col {
+  > .alert--warning {
+    background-color: rgba(100, 215, 255, 0.3);
   }
 }
 
@@ -486,40 +406,6 @@ html[data-theme='dark'] .avatar__name a {
 
 .avatar__subtitle {
   margin-top: 0;
-  font-weight: 500;
-  color: var(--subtle);
-}
-
-article header h2 a {
-  color: var(--ifm-font-color-base);
-
-  &:hover {
-    color: var(--light);
-  }
-}
-
-div[class^='blogPostData'] {
-  color: var(--subtle);
-}
-
-.main-wrapper.blog-wrapper .container.margin-vert--lg .col.text--right a {
-  padding: 8px 16px !important;
-}
-
-a[class*='tagRegular'] {
-  padding: 6px 12px !important;
-
-  &:hover {
-    background: var(--ifm-menu-color-background-active);
-    --docusaurus-tag-list-border: inherit;
-  }
-}
-
-.blog-wrapper {
-  .pagination-nav__item .pagination-nav__label:before,
-  .pagination-nav__item--next .pagination-nav__label:after {
-    display: none;
-  }
 }
 
 /* Navbar */
@@ -545,21 +431,14 @@ a[class*='tagRegular'] {
 
   .navbar__item {
     &.navbar__link {
-      font-weight: 400;
-      font-size: 17px;
+      font-weight: 300;
+      font-size: 18px;
       user-select: none;
     }
 
-    &.dropdown {
-      a {
-        font-weight: 400;
-        font-size: 14px;
-      }
-      ul {
-        /* Control navbar dropdown alignment */
-        top: calc(100% + 0px);
-        left: 0;
-      }
+    &.dropdown a {
+      font-weight: 400;
+      font-size: 14px;
     }
   }
 
@@ -605,7 +484,6 @@ a[class*='tagRegular'] {
   .DocSearch-Button {
     border-radius: var(--ifm-global-radius);
     padding: 0 6px 0 10px;
-    font-family: var(--ifm-font-family-base);
 
     .DocSearch-Search-Icon {
       width: 16px;
@@ -664,43 +542,24 @@ a[class*='tagRegular'] {
     margin-left: -20px;
     margin-right: -20px;
     position: relative;
-    top: 18px;
+    top: 17px;
     background: var(--brand);
   }
 }
 
-/*
-Config has themeConfig.navbar.style === "dark"
-But the navbar sidebar should still support light theme
-So we need to "revert" some CSS vars to not enforce dark mode
- */
-.navbar--dark {
-  --ifm-menu-link-sublist-icon-filter: inherit; /* reset to non-dark value */
-  --ifm-menu-color: inherit;
-  --ifm-navbar-background-color: var(--divider);
-}
-
 .navbar-sidebar {
+  background: var(--divider);
+  max-width: 400px;
+
   .navbar-sidebar__brand {
     background-color: var(--deepdark);
   }
 
   .navbar-sidebar__items {
-    > .navbar-sidebar__item.menu {
-      > ul.menu__list {
-        margin: 4px;
-      }
-    }
+    padding: 12px;
 
     .menu__list-item a {
-      color: var(--ifm-color-emphasis-700);
       padding: 6px 12px 8px;
-    }
-
-    .menu__list-item-collapsible a[class*='menuLinkText'] {
-      font-weight: 600;
-      font-size: 14px;
-      background: var(--ifm-background-color) !important;
     }
   }
 
@@ -725,19 +584,10 @@ html[data-theme='dark'] .navbar-sidebar {
   background: var(--ifm-background-color);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1080px) {
   .navbar {
-    .navbar__item.navbar__link {
-      font-size: 15px;
-
-      &.navbar__link--active:after {
-        top: 20px;
-      }
-    }
-
     .DocSearch-Button {
       padding: 0 12px;
-      max-width: 40px;
     }
 
     .DocSearch-Button-Key,
@@ -748,44 +598,19 @@ html[data-theme='dark'] .navbar-sidebar {
   }
 }
 
+@media (max-width: 480px) {
+  .navbar-sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 /* Sidebar */
 
 aside[class^='docSidebarContainer'] {
-  --doc-sidebar-width: 266px;
   margin-right: 16px;
 
-  .thin-scrollbar {
-    @extend %scrollbar-style;
-  }
-
-  .menu__list .menu__link--sublist,
-  a[class*='menuLinkText'] {
-    font-size: 16px !important;
-    font-weight: 700 !important;
-    padding: 5px 12px !important;
-    color: var(--ifm-color-content-secondary) !important;
-
-    &:after {
-      background-size: 1.66rem 1.66rem;
-      margin-right: -6px;
-      margin-top: -1px;
-    }
-  }
-
-  .menu__list .menu__list .menu__link--sublist,
-  a[class*='menuLinkText'] {
-    font-weight: 700 !important;
-    font-size: 15px !important;
-  }
-
-  .menu__list-item .menu__list-item .menu__list-item {
-    padding-left: 8px !important;
-  }
-
-  .theme-doc-sidebar-item-category .menu__list .menu__list-item-collapsible {
-    margin-top: 6px;
-  }
-
+  --doc-sidebar-width: 266px;
   @media only screen and (max-width: 1120px) {
     --doc-sidebar-width: 240px;
   }
@@ -808,9 +633,7 @@ aside[class^='docSidebarContainer'] {
 }
 
 .menu__list {
-  margin-bottom: 8px;
-  transition: none !important;
-  height: auto !important;
+  margin-bottom: 10px;
 
   .menu__list-item {
     margin-bottom: 2px;
@@ -818,57 +641,44 @@ aside[class^='docSidebarContainer'] {
     user-select: none;
   }
 
-  .menu__link--sublist {
-    font-size: 15px;
-    font-weight: 600;
-    padding: 5px 12px !important;
-    color: var(--light);
-
-    &:after {
-      background-size: 1.66rem 1.66rem;
-      margin-right: -6px;
-    }
-  }
-
   .menu__list {
     .menu__link {
       line-height: 20px;
       font-size: 13px;
       padding: 3px 12px;
-      font-weight: 300;
+      font-weight: normal;
       color: var(--ifm-font-color-base);
     }
 
     .menu__link--sublist {
-      font-size: 14px !important;
-    }
-
-    .menu__list .menu__link {
-      padding: 3px 12px;
-    }
-
-    .menu__list .menu__link--active {
-      padding-left: 12px;
+      font-weight: 600 !important;
+      margin-top: 4px;
     }
   }
 
-  .theme-doc-sidebar-item-link .menu__link--active {
+  .menu__link--sublist {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    padding: 5px 12px !important;
+    color: var(--subtle) !important;
+
+    &:after {
+      background-size: 1.66rem 1.66rem;
+      margin-right: -6px;
+      margin-top: -1px;
+    }
+  }
+
+  .menu__link--active.active {
     border-left-width: 4px;
     border-left-style: solid;
     border-left-color: var(--ifm-menu-color-active) !important;
-    font-weight: 600 !important;
-    padding-left: 8px !important;
-    background: var(--ifm-code-background);
+    font-weight: 700 !important;
+    padding-left: 8px;
   }
 
   .menu__list-item--collapsed .menu__list {
     margin-bottom: 0;
-  }
-}
-
-.menu__list-item.menu__list-item--collapsed {
-  .menu__list {
-    height: 0 !important;
   }
 }
 
@@ -879,14 +689,6 @@ aside[class^='docSidebarContainer'] {
 
 html[data-theme='dark'] .menu {
   @extend %scrollbar-style-dark;
-
-  .menu__list > .menu__list-item > .menu__link--sublist {
-    color: var(--ifm-color-emphasis-400);
-  }
-
-  .menu__list .menu__list .menu__link--sublist {
-    color: var(--subtle);
-  }
 }
 
 /* TOC */
@@ -920,14 +722,6 @@ div[class^='tableOfContents'] {
       padding: 0;
       border: 0;
     }
-
-    &:hover {
-      color: var(--ifm-link-color);
-
-      code {
-        color: var(--ifm-link-color);
-      }
-    }
   }
 
   .table-of-contents__link--active {
@@ -942,14 +736,6 @@ div[class^='tableOfContents'] {
       color: var(--ifm-font-color-base);
       white-space: nowrap;
     }
-
-    &:hover {
-      color: var(--ifm-font-color-base);
-
-      code {
-        color: var(--ifm-font-color-base);
-      }
-    }
   }
 }
 
@@ -957,22 +743,9 @@ html[data-theme='dark'] div[class^='tableOfContents'] {
   @extend %scrollbar-style-dark;
 }
 
-button[class*='tocCollapsibleButton'] {
-  color: var(--ifm-color-content-secondary);
-}
+/* Docs Metadata */
 
-.navbar-sidebar {
-  background: var(--ifm-background-surface-color);
-}
-
-.navbar-sidebar__back {
-  color: var(--ifm-color-content-secondary);
-  background: var(--ifm-footer-background-color);
-}
-
-/* Doc Item footer metadata */
-
-.theme-doc-footer {
+.docMetadata {
   margin-top: 40px !important;
   margin-bottom: 16px !important;
   font-size: 15px;
@@ -996,20 +769,20 @@ button[class*='tocCollapsibleButton'] {
     font-weight: 600;
   }
 
-  .theme-last-updated {
+  .docMetadata-updated {
     line-height: 18px;
   }
 }
 
 @media only screen and (min-width: 540px) and (max-width: 996px) {
-  .theme-doc-footer .col {
+  .docMetadata .col {
     flex-basis: 50% !important;
     max-width: 50% !important;
   }
 }
 
 @media only screen and (max-width: 539px) {
-  .theme-doc-footer .col {
+  .docMetadata .col {
     text-align: center;
 
     &:first-child {
@@ -1121,27 +894,37 @@ button[class*='tocCollapsibleButton'] {
   }
 }
 
+/* Blog */
+
+article header h2 a {
+  color: var(--ifm-font-color-base);
+
+  &:hover {
+    color: var(--light);
+  }
+}
+
+.avatar__subtitle {
+  font-weight: 600;
+  color: var(--subtle);
+}
+
 /* Announcement banner */
 
 :root {
   --docusaurus-announcement-bar-height: auto !important;
 }
 
-div[class^='announcementBar'][role='banner'] {
-  border-bottom-color: var(--deepdark);
-
-  button.close {
-    svg {
-      fill: white;
-    }
-  }
-}
-
-div[class^='announcementBarContent'] {
+.announcement {
+  color: #fff;
   line-height: 40px;
-  font-size: 20px;
   font-weight: bold;
+  font-size: 24px;
   padding: 8px 30px;
+  text-align: center;
+  height: 60px;
+  width: 100%;
+  background-color: var(--deepdark);
 
   a {
     text-decoration: underline;
@@ -1149,9 +932,13 @@ div[class^='announcementBarContent'] {
     color: var(--brand) !important;
 
     &:hover {
-      color: var(--ifm-color-primary) !important;
+      color: #fff !important;
     }
   }
+}
+
+div[class^='announcementBarContent'] {
+  background-color: var(--deepdark);
 }
 
 @media only screen and (max-width: 768px) {
@@ -1387,7 +1174,7 @@ h2 .label {
 }
 
 h3 .label {
-  top: -3px;
+  top: -2px;
   margin-left: 22px;
   line-height: 20px;
 }
@@ -1399,11 +1186,11 @@ td .label {
 
   &:before {
     left: -8px;
-    border-width: 10px 8px 10px 0;
+    border-width: 9px 8px 9px 0;
   }
 
   &:after {
-    top: 8px;
+    top: 7px;
   }
 
   &.required {
@@ -1435,7 +1222,7 @@ td .label {
   height: 6px;
   border-radius: 100%;
   margin-left: 4px;
-  margin-top: 7px;
+  margin-top: 8px;
   white-space: nowrap;
   overflow: hidden;
   color: transparent;
@@ -1640,10 +1427,6 @@ html[data-theme='dark'] .docsRating {
   grid-template-rows: 1fr;
   grid-template-areas: '. .';
 
-  div[class^='codeBlockContainer'] {
-    overflow: auto;
-  }
-
   div[class^='codeBlockLines'] {
     white-space: pre-wrap;
   }
@@ -1658,13 +1441,9 @@ html[data-theme='dark'] .docsRating {
   }
 }
 
-/* Blog */
+/* Blog sidebar */
 
 .main-wrapper.blog-wrapper {
-  h3[class*='sidebarItemTitle'] {
-    color: var(--ifm-font-color-secondary);
-  }
-
   .container.margin-vert--lg {
     max-width: calc(100% - (var(--ifm-spacing-horizontal)) * 4);
     margin-top: 0 !important;
@@ -1682,24 +1461,21 @@ html[data-theme='dark'] .docsRating {
       margin-right: 16px;
     }
 
-    .docusaurus-mt-lg {
-      margin-top: 2rem;
-    }
-
     footer {
-      b {
+      strong {
         font-weight: 500;
-      }
-
-      .text--right b {
-        font-weight: 700;
       }
     }
   }
 
   .container .row .col.col--3 {
     --ifm-col-width: calc(5 / 24 * 100%);
-    padding: 0;
+    padding-left: 0;
+
+    &:last-child {
+      --ifm-col-width: calc(4 / 24 * 100%);
+      padding-right: 0;
+    }
 
     div[class^='sidebar'] {
       h3 {
@@ -1708,7 +1484,7 @@ html[data-theme='dark'] .docsRating {
       }
 
       h4 {
-        font-weight: 700;
+        font-weight: 500;
         font-size: 14px;
         margin-top: 14px;
         margin-bottom: 6px;
@@ -1728,7 +1504,7 @@ html[data-theme='dark'] .docsRating {
 
   .container .row .col.col--7 {
     --ifm-col-width: calc(15 / 24 * 100%);
-    padding: 24px 16px 24px 32px;
+    padding: 24px 16px 24px 20px;
 
     &:last-child {
       --ifm-col-width: calc(18 / 24 * 100%);
@@ -1746,16 +1522,6 @@ html[data-theme='dark'] {
       a.margin-horiz--sm,
       a.padding-right--md {
         @extend %link-style-dark;
-      }
-    }
-  }
-}
-
-html[data-theme='light'] {
-  .main-wrapper.blog-wrapper {
-    .container.margin-vert--lg {
-      .col.text--right a:hover {
-        color: var(--ifm-link-color);
       }
     }
   }

@@ -4,98 +4,24 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: '特明',
-  // tagline: 'Dinosaurs are cool',
   url: process.env.URL || 'https://huteming.github.io', // 您的网站网址
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  baseUrl: '/', // 站点的相对路径
+  onBrokenLinks: 'throw', // 检测到无效链接时的行为
+  onBrokenMarkdownLinks: 'warn', // 在检测到无效 Markdown 链接时的行为
   favicon: 'img/favicon.ico',
-  organizationName: 'huteming', // Usually your GitHub org/user name.
-  projectName: 'huteming.github.io', // Usually your repo name.
-  trailingSlash: false,
-  themeConfig: {
-    navbar: {
-      title: '特明的笔记',
-      // logo: {
-      //   alt: 'My Site Logo',
-      //   src: 'img/logo.png',
-      // },
-      style: 'dark',
-      items: [
-        // {
-        //   type: 'doc',
-        //   docId: 'intro',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
-        // {to: '/blog', label: 'Blog', position: 'left'},
-        // {
-        //   href: 'https://github.com/facebook/docusaurus',
-        //   label: 'GitHub',
-        //   position: 'right',
-        // },
-      ],
-    },
-    // footer: {
-    //   style: 'dark',
-    //   links: [
-    //     {
-    //       title: 'Docs',
-    //       items: [
-    //         {
-    //           label: 'Tutorial',
-    //           to: '/docs/intro',
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: 'Community',
-    //       items: [
-    //         {
-    //           label: 'Stack Overflow',
-    //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-    //         },
-    //         {
-    //           label: 'Discord',
-    //           href: 'https://discordapp.com/invite/docusaurus',
-    //         },
-    //         {
-    //           label: 'Twitter',
-    //           href: 'https://twitter.com/docusaurus',
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: 'More',
-    //       items: [
-    //         {
-    //           label: 'Blog',
-    //           to: '/blog',
-    //         },
-    //         {
-    //           label: 'GitHub',
-    //           href: 'https://github.com/facebook/docusaurus',
-    //         },
-    //       ],
-    //     },
-    //   ],
-    //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    // },
-    prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-    },
+  organizationName: 'huteming', // 拥有此源的 GitHub 用户或组织。 用于部署命令。
+  projectName: 'huteming.github.io', // GitHub 源的名称。 用于部署命令。
+  trailingSlash: false, // 允许您自定义 URL/链接后是否添加结尾斜杠。
+  i18n: {
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
-  themes: ['@docusaurus/theme-live-codeblock'],
   presets: [
     [
       '@docusaurus/preset-classic',
       {
         // docs: {
         //   sidebarPath: require.resolve('./sidebars.js'),
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/edit/master/website/',
         // },
         docs: false,
         blog: {
@@ -103,9 +29,6 @@ module.exports = {
           blogSidebarCount: 'ALL',
           blogSidebarTitle: 'All Blog Posts',
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
         },
         theme: {
           customCss: [
@@ -120,21 +43,25 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['docusaurus-plugin-sass'],
-  // 经典主题的标签译文及类型
-  // https://github.com/facebook/docusaurus/tree/master/packages/docusaurus-theme-classic/codeTranslations
-  i18n: {
-    defaultLocale: 'zh-Hans',
-    locales: ['zh-Hans'],
-    // localeConfigs: {
-    //   en: {
-    //     label: 'English',
-    //     direction: 'ltr',
-    //   },
-    //   'zh-Hans': {
-    //     label: '中文（中国）',
-    //     direction: 'ltr',
-    //   },
-    // },
+  themeConfig: {
+    navbar: {
+      title: '笔记',
+      style: 'dark', // dark | primary
+      items: [
+        // {
+        //   type: 'doc',
+        //   docId: 'react',
+        //   position: 'right',
+        //   label: 'React',
+        // },
+        // { to: '/', label: '最近', position: 'right' },
+      ],
+    },
+    prism: {
+      theme: darkCodeTheme,
+      darkTheme: darkCodeTheme,
+    },
   },
+  themes: ['@docusaurus/theme-live-codeblock'],
+  plugins: ['docusaurus-plugin-sass'],
 }

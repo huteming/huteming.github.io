@@ -1,4 +1,4 @@
-@import "shared";
+@import 'shared';
 
 .versions-page {
   max-width: 960px;
@@ -39,7 +39,7 @@
   }
 }
 
-html[data-theme="dark"] .versions-page {
+html[data-theme='dark'] .versions-page {
   p a,
   td a {
     @extend %link-style-dark;

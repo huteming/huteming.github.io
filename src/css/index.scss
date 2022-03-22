@@ -1,4 +1,4 @@
-@import "shared";
+@import 'shared';
 
 .homepage {
   width: 100%;
@@ -32,7 +32,7 @@
     color: var(--brand);
 
     &::after {
-      content: "›";
+      content: '›';
       font-size: 24px;
       margin-left: 5px;
     }
@@ -247,7 +247,7 @@
 }
 
 .GetStarted .terminal::before {
-  content: "○ ○ ○";
+  content: '○ ○ ○';
   color: gray;
   font-size: 16px;
   position: absolute;
@@ -264,7 +264,7 @@
 }
 
 .GetStarted code:first-child::before {
-  content: ">";
+  content: '>';
   position: absolute;
   left: -13px;
   color: gray;
@@ -584,7 +584,7 @@
     /* Bleed background into the right */
     margin-right: -9999px;
     padding: 16px 1.5rem;
-    height: 450px;
+    height: 460px;
   }
 }
 
@@ -654,24 +654,24 @@
   @extend %link-style;
 }
 
-html[data-theme="dark"] .Section p a {
+html[data-theme='dark'] .Section p a {
   @extend %link-style-dark;
 }
 
-/* Talks */
+/* VideoContent */
 
-.Talks {
+.VideoContent {
   .twitter-follow-button {
     margin-top: 1.5rem;
   }
 }
 
 @media only screen and (max-width: 960px) {
-  .Talks .TwoColumns {
+  .VideoContent .TwoColumns {
     grid-gap: 2rem;
   }
 
-  .Talks .column.last {
+  .VideoContent .column.last {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -681,13 +681,13 @@ html[data-theme="dark"] .Section p a {
    * If the full-width video won't fit, make it full-width.
    * https://jameshfisher.com/2017/08/30/how-do-i-make-a-full-width-iframe/
    */
-  .Talks .vidWrapper {
+  .VideoContent .vidWrapper {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
   }
 
-  .Talks iframe {
+  .VideoContent iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -698,11 +698,11 @@ html[data-theme="dark"] .Section p a {
 
 @media only screen and (min-width: 961px) {
   /* Give more width for the video */
-  .Talks .TwoColumns {
+  .VideoContent .TwoColumns {
     grid-template-columns: 1fr 2fr;
   }
 
-  .Talks iframe {
+  .VideoContent iframe {
     width: 560px;
     height: 315px;
   }
@@ -731,11 +731,11 @@ html[data-theme="dark"] .Section p a {
     max-width: 900px;
     margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "first last";
+    grid-template-areas: 'first last';
   }
 
   .TwoColumns.reverse {
-    grid-template-areas: "last first";
+    grid-template-areas: 'last first';
   }
 
   .TwoColumns .column {
@@ -755,7 +755,7 @@ html[data-theme="dark"] .Section p a {
   .TwoColumns,
   .TwoColumns.reverse {
     grid-template-columns: 1fr;
-    grid-template-areas: "first" "last";
+    grid-template-areas: 'first' 'last';
   }
 
   .TwoColumns .column {
