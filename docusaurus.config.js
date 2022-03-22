@@ -20,10 +20,9 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        // },
-        docs: false,
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
         blog: {
           routeBasePath: '/',
           blogSidebarCount: 'ALL',
@@ -48,13 +47,13 @@ module.exports = {
       title: '笔记',
       style: 'dark', // dark | primary
       items: [
-        // {
-        //   type: 'doc',
-        //   docId: 'react',
-        //   position: 'right',
-        //   label: 'React',
-        // },
-        // { to: '/', label: '最近', position: 'right' },
+        {
+          type: 'doc',
+          docId: 'react/严格模式',
+          position: 'right',
+          label: 'React',
+        },
+        // { to: '/blog', label: '最近', position: 'right' },
       ],
     },
     prism: {
