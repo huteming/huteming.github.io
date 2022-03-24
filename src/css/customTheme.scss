@@ -835,7 +835,7 @@ aside[class^='docSidebarContainer'] {
       line-height: 20px;
       font-size: 13px;
       padding: 3px 12px;
-      font-weight: 300;
+      font-weight: 400; // ??? 300 => 400
       color: var(--ifm-font-color-base);
     }
 
