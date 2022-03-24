@@ -49,7 +49,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'react/严格模式',
+          docId: 'react/changelog',
           position: 'right',
           label: 'React',
         },
