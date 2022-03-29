@@ -67,6 +67,12 @@ module.exports = {
           position: 'right',
           label: 'React',
         },
+        {
+          type: 'doc',
+          docId: 'helper/compose',
+          position: 'right',
+          label: '函数',
+        },
         // { to: '/blog', label: '最近', position: 'right' },
       ],
     },
