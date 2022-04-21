@@ -1,7 +1,8 @@
 ```js
 function fakeInstanceof(instance, constructor) {
   try {
-    const proto = Object.getPrototypeOf(instance)
+    const proto = Reflect.getPrototypeOf(instance)
+    // const proto = Object.getPrototypeOf(instance)
     if (proto === constructor.prototype) {
       return true
     }
@@ -22,6 +23,7 @@ const child = new Child()
 console.log(fakeInstanceof(child, Child))
 console.log(fakeInstanceof(child, Parent))
 console.log(fakeInstanceof(child, Object))
-console.log(fakeInstanceof(1, Number))
+console.log(fakeInstanceof(1, Number)) // false
 console.log(fakeInstanceof(null, Object))
+console.log(fakeInstanceof(() => {}, Function))
 ```

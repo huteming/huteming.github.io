@@ -69,6 +69,36 @@ module.exports = {
         },
         {
           type: 'doc',
+          docId: 'javascript/reflect',
+          position: 'right',
+          label: 'Javascript',
+        },
+        {
+          type: 'doc',
+          docId: 'css/水平垂直居中',
+          position: 'right',
+          label: 'CSS',
+        },
+        {
+          type: 'doc',
+          docId: 'http/响应状态码',
+          position: 'right',
+          label: 'HTTP',
+        },
+        {
+          type: 'doc',
+          docId: 'performance/性能指标',
+          position: 'right',
+          label: 'Web 性能',
+        },
+        {
+          type: 'doc',
+          docId: 'security/常见攻击类型',
+          position: 'right',
+          label: 'Web 安全',
+        },
+        {
+          type: 'doc',
           docId: 'helper/compose',
           position: 'right',
           label: '函数',
