@@ -4,8 +4,8 @@ const autoCategory = [
     label: 'React',
   },
   {
-    dirName: 'helper',
-    label: '函数',
+    dirName: 'code',
+    label: '代码',
   },
   {
     dirName: 'javascript',

@@ -99,9 +99,9 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'helper/compose',
+          docId: 'code/compose',
           position: 'right',
-          label: '函数',
+          label: '代码',
         },
         // { to: '/blog', label: '最近', position: 'right' },
       ],
