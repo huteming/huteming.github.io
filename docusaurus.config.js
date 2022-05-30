@@ -69,6 +69,12 @@ module.exports = {
         },
         {
           type: 'doc',
+          docId: 'webpack/模块化实现',
+          position: 'right',
+          label: 'Webpack',
+        },
+        {
+          type: 'doc',
           docId: 'javascript/reflect',
           position: 'right',
           label: 'Javascript',

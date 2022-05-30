@@ -1,5 +1,9 @@
 const autoCategory = [
   {
+    dirName: 'webpack',
+    label: 'Webpack',
+  },
+  {
     dirName: 'react',
     label: 'React',
   },
