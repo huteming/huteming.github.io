@@ -63,6 +63,12 @@ module.exports = {
       items: [
         {
           type: 'doc',
+          docId: 'engineering/mvc-vs-flux',
+          position: 'right',
+          label: '工程化',
+        },
+        {
+          type: 'doc',
           docId: 'react/changelog',
           position: 'right',
           label: 'React',

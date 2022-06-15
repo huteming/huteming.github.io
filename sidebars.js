@@ -1,5 +1,9 @@
 const autoCategory = [
   {
+    dirName: 'engineering',
+    label: '前端工程化',
+  },
+  {
     dirName: 'webpack',
     label: 'Webpack',
   },
