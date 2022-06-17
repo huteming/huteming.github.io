@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello world</h1>
+
+    <script>
+      window.addEventListener(
+        'error',
+        (error) => {
+          console.log('onerror: ', error)
+        },
+        true,
+      )
+
+      window.addEventListener('unhandledrejection', (error) => {
+        console.log('unhandledrejection: ', error)
+      })
+    </script>
+
+    <script>
+      // try {
+      // const xx,
+      // } catch (e) {
+      //   console.log('捕获到异常：', e)
+      // }
+
+      // try {
+      // const person = void 0
+      // person.name
+      // } catch (e) {
+      //   console.log('捕获到异常：', e)
+      // }
+
+      // try {
+      // setTimeout(() => {
+      //   throw new Error('timeout error')
+      // }, 10)
+      // } catch (e) {
+      //   console.log('捕获到异常：', e)
+      // }
+
+      // Promise.reject(new Error('promise error'))
+      // fetch('/json')
+    </script>
+
+    <!-- <img src="/image.png" alt="" /> -->
+    <!-- <script src="http://localhost:8000/js" crossorigin="anonymous"></script> -->
+  </body>
+</html>
