@@ -2,6 +2,7 @@ const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const math = require('remark-math')
 const katex = require('rehype-katex')
+const directories = require('./directories')
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
@@ -60,63 +61,12 @@ module.exports = {
     navbar: {
       title: '笔记',
       style: 'dark', // dark | primary
-      items: [
-        {
-          type: 'doc',
-          docId: 'engineering/mvc-vs-flux',
-          position: 'right',
-          label: '工程化',
-        },
-        {
-          type: 'doc',
-          docId: 'react/changelog',
-          position: 'right',
-          label: 'React',
-        },
-        {
-          type: 'doc',
-          docId: 'webpack/模块化实现',
-          position: 'right',
-          label: 'Webpack',
-        },
-        {
-          type: 'doc',
-          docId: 'javascript/reflect',
-          position: 'right',
-          label: 'Javascript',
-        },
-        {
-          type: 'doc',
-          docId: 'css/水平垂直居中',
-          position: 'right',
-          label: 'CSS',
-        },
-        {
-          type: 'doc',
-          docId: 'http/响应状态码',
-          position: 'right',
-          label: 'HTTP',
-        },
-        {
-          type: 'doc',
-          docId: 'performance/性能指标',
-          position: 'right',
-          label: 'Web 性能',
-        },
-        {
-          type: 'doc',
-          docId: 'security/常见攻击类型',
-          position: 'right',
-          label: 'Web 安全',
-        },
-        {
-          type: 'doc',
-          docId: 'code/compose',
-          position: 'right',
-          label: '代码',
-        },
-        // { to: '/blog', label: '最近', position: 'right' },
-      ],
+      items: directories.map(({ label, docId }) => ({
+        type: 'doc',
+        position: 'right',
+        label,
+        docId,
+      })),
     },
     prism: {
       theme: darkCodeTheme,
