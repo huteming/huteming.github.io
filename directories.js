@@ -92,4 +92,14 @@ module.exports = [
       },
     ],
   },
+  {
+    label: '面试',
+    docId: 'interview/html/script中的async和defer属性',
+    sidebars: [
+      {
+        label: 'HTML',
+        dirName: 'interview/html',
+      },
+    ],
+  },
 ]
