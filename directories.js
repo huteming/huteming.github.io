@@ -116,6 +116,10 @@ module.exports = [
         label: 'React',
         dirName: 'interview/react',
       },
+      {
+        label: 'webpack',
+        dirName: 'interview/webpack',
+      },
     ],
   },
 ]
