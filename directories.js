@@ -93,12 +93,16 @@ module.exports = [
     ],
   },
   {
-    label: '面试',
-    docId: 'interview/html/script中的async和defer属性',
+    label: '概述',
+    docId: 'interview/html/如何理解HTML语义化',
     sidebars: [
       {
         label: 'HTML',
         dirName: 'interview/html',
+      },
+      {
+        label: 'CSS',
+        dirName: 'interview/css',
       },
     ],
   },
