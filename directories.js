@@ -120,6 +120,10 @@ module.exports = [
         label: 'webpack',
         dirName: 'interview/webpack',
       },
+      {
+        label: '性能优化',
+        dirName: 'interview/performance',
+      },
     ],
   },
 ]
