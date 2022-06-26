@@ -108,6 +108,10 @@ module.exports = [
         label: 'JS',
         dirName: 'interview/js',
       },
+      {
+        label: 'HTTP',
+        dirName: 'interview/http',
+      },
     ],
   },
 ]
