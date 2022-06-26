@@ -112,6 +112,10 @@ module.exports = [
         label: 'HTTP',
         dirName: 'interview/http',
       },
+      {
+        label: 'React',
+        dirName: 'interview/react',
+      },
     ],
   },
 ]
