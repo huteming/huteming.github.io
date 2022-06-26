@@ -104,6 +104,10 @@ module.exports = [
         label: 'CSS',
         dirName: 'interview/css',
       },
+      {
+        label: 'JS',
+        dirName: 'interview/js',
+      },
     ],
   },
 ]
