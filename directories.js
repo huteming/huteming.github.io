@@ -3,42 +3,12 @@
  */
 module.exports = [
   {
-    label: '工程化',
-    docId: 'engineering/mvc-vs-flux',
+    label: 'HTML',
+    docId: 'html/script中的async和defer属性',
     sidebars: [
       {
-        label: '前端工程化',
-        dirName: 'engineering',
-      },
-    ],
-  },
-  {
-    label: 'React',
-    docId: 'react/changelog',
-    sidebars: [
-      {
-        label: 'React',
-        dirName: 'react',
-      },
-    ],
-  },
-  {
-    label: 'Webpack',
-    docId: 'webpack/模块化实现',
-    sidebars: [
-      {
-        label: 'Webpack',
-        dirName: 'webpack',
-      },
-    ],
-  },
-  {
-    label: 'Javascript',
-    docId: 'javascript/reflect',
-    sidebars: [
-      {
-        label: 'Javascript',
-        dirName: 'javascript',
+        label: 'HTML',
+        dirName: 'html',
       },
     ],
   },
@@ -53,12 +23,42 @@ module.exports = [
     ],
   },
   {
+    label: 'JS',
+    docId: 'js/reflect',
+    sidebars: [
+      {
+        label: 'JS',
+        dirName: 'js',
+      },
+    ],
+  },
+  {
+    label: 'React',
+    docId: 'react/changelog',
+    sidebars: [
+      {
+        label: 'React',
+        dirName: 'react',
+      },
+    ],
+  },
+  {
     label: 'HTTP',
     docId: 'http/响应状态码',
     sidebars: [
       {
         label: 'HTTP',
         dirName: 'http',
+      },
+    ],
+  },
+  {
+    label: '工程化',
+    docId: 'engineering/mvc-vs-flux',
+    sidebars: [
+      {
+        // label: '前端工程化',
+        dirName: 'engineering',
       },
     ],
   },
@@ -109,12 +109,12 @@ module.exports = [
         dirName: 'interview/js',
       },
       {
-        label: 'HTTP',
-        dirName: 'interview/http',
-      },
-      {
         label: 'React',
         dirName: 'interview/react',
+      },
+      {
+        label: 'HTTP',
+        dirName: 'interview/http',
       },
       {
         label: 'webpack',
