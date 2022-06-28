@@ -67,7 +67,6 @@ module.exports = [
     docId: 'performance/性能指标',
     sidebars: [
       {
-        label: 'Web 性能',
         dirName: 'performance',
       },
     ],
@@ -77,7 +76,6 @@ module.exports = [
     docId: 'security/常见攻击类型',
     sidebars: [
       {
-        label: 'Web 安全',
         dirName: 'security',
       },
     ],
@@ -93,7 +91,7 @@ module.exports = [
     ],
   },
   {
-    label: '概述',
+    label: '总结',
     docId: 'interview/html/如何理解HTML语义化',
     sidebars: [
       {
