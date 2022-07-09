@@ -122,6 +122,14 @@ module.exports = [
         label: '性能优化',
         dirName: 'interview/performance',
       },
+      {
+        label: '微前端',
+        dirName: 'interview/micro',
+      },
+      {
+        label: '工程化',
+        dirName: 'interview/engineering',
+      },
     ],
   },
 ]
