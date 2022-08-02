@@ -1,14 +1,19 @@
 import Subtitle from '../../src/components/Subtitle'
 
-## 构建打点
+## 开发阶段
 
-<Subtitle href='https://www.npmjs.com/package/speed-measure-webpack-plugin'>
-  speed-measure-webpack-plugin
-</Subtitle>
+### 热更新
 
-它能够测量出在你的构建过程中，每一个 Loader 和 Plugin 的执行时长，官方给出的效果图是下面这样：
+它允许在运行时更新所有类型的模块，而无需完全刷新。
 
-![speed-measure-webpack-plugin](/img/blog/webpack/speed-measure-webpack-plugin.png)
+```js
+module.exports = {
+  plugins: [new webpack.HotModuleReplacementPlugin()],
+  devServer: {
+    hot: true,
+  },
+}
+```
 
 ## 构建阶段
 
@@ -128,6 +133,23 @@ module.exports = {
   }
 }
 ```
+
+## 构建结果
+
+1. 区分构建环境。webpack 生产环境的构建自带一些优化。
+2. 压缩。包括 js、css 代码，以及 gzip 压缩。
+3. 开启 tree-shaking。
+4. 注意 source-map 类型。生产环境一般不需要。
+
+## 构建打点
+
+<Subtitle href='https://www.npmjs.com/package/speed-measure-webpack-plugin'>
+  speed-measure-webpack-plugin
+</Subtitle>
+
+它能够测量出在你的构建过程中，每一个 Loader 和 Plugin 的执行时长，官方给出的效果图是下面这样：
+
+![speed-measure-webpack-plugin](/img/blog/webpack/speed-measure-webpack-plugin.png)
 
 ## 构建分析
 

@@ -2,19 +2,25 @@
 
 `宏队列，macrotask，也叫tasks。` 一些异步任务的回调会依次进入 macro task queue，等待后续被调用，这些异步任务包括：
 
+- script 代码块
 - setTimeout
 - setInterval
 - setImmediate (Node 独有)
-- requestAnimationFrame (浏览器独有)
-- I/O
-- UI rendering (浏览器独有)
 
 `微队列，microtask，也叫jobs。` 另一些异步任务的回调会依次进入 micro task queue，等待后续被调用，这些异步任务包括：
 
 - process.nextTick (Node 独有)
 - Promise
-- Object.observe
 - MutationObserver
+
+**多任务队列**
+
+事件循环中可能会有**一个或多个任务队列**，这些队列分别为了处理：
+
+1. 鼠标和键盘事件
+2. 其他的一些 Task
+
+浏览器会在保持任务顺序的前提下，可能分配四分之三的优先权给鼠标和键盘事件，保证用户的输入得到最高优先级的响应，而剩下的优先级交给其他 Task，并且保证不会“饿死”它们。
 
 ## 浏览器的 EventLoop
 
@@ -22,20 +28,34 @@
 
 执行一个 JavaScript 代码的具体流程：
 
-1. 执行全局 Script 同步代码，这些同步代码有一些是同步语句，有一些是异步语句（比如 setTimeout 等）；
-2. 全局 Script 代码执行完毕后，调用栈 Stack 会清空；
-3. 从微队列 microtask queue 中取出位于队首的回调任务，放入调用栈 Stack 中执行，执行完后 microtask queue 长度减 1；
-4. 继续取出位于队首的任务，放入调用栈 Stack 中执行，以此类推，直到直到把 microtask queue 中的所有任务都执行完毕。注意，如果在执行 microtask 的过程中，又产生了 microtask，那么会加入到队列的末尾，也会在这个周期被调用执行；
-5. microtask queue 中的所有任务都执行完毕，此时 microtask queue 为空队列，调用栈 Stack 也为空；
-6. 取出宏队列 macrotask queue 中位于队首的任务，放入 Stack 中执行；
-7. 执行完毕后，调用栈 Stack 为空；
-8. 重复第 3-7 个步骤；
+1. 从任务队列中取出一个**宏任务**并执行。
+2. 检查微任务队列，执行并清空**微任务**队列，如果在微任务的执行中又加入了新的微任务，也会在这一步一起执行。
+3. 进入更新渲染阶段，判断是否需要渲染，这里有一个 rendering opportunity 的概念，也就是说不一定每一轮 event loop 都会对应一次浏览 器渲染，要根据屏幕刷新率、页面性能、页面是否在后台运行来共同决定，通常来说这个渲染间隔是固定的。（所以多个 task 很可能在一次渲染之间执行）
 
-这里归纳几个重点：
+:::tip
 
-1. 宏队列 `macrotask 一次只从队列中取一个任务执行`，执行完后就去执行微任务队列中的任务；
-2. `微任务队列中所有的任务都会被依次取出来执行`，直到 microtask queue 为空；
-3. 图中没有画 UI rendering 的节点，因为这个是由浏览器自行判断决定的，但是只要执行 UI rendering，它的节点是在执行完所有的 microtask 之后，下一个 macrotask 之前，紧跟着执行 UI render。
+- 浏览器会尽可能的保持帧率稳定，例如页面性能无法维持 60fps（每 16.66ms 渲染一次）的话，那么浏览器就会选择 30fps 的更新速率，而不是偶尔丢帧。
+- 如果浏览器上下文不可见，那么页面会降低到 4fps 左右甚至更低。
+- 如果满足以下条件，也会跳过渲染：
+
+1. 浏览器判断更新渲染不会带来视觉上的改变。
+2. map of animation frame callbacks 为空，也就是帧动画回调为空，可以通过 requestAnimationFrame 来请求帧动画。
+
+:::
+
+4. 有时候浏览器希望两次「定时器任务」是合并的，他们之间只会穿插着 microTask 的执行，而不会穿插屏幕渲染相关的流程。
+   如果上述的判断**决定本轮不需要渲染**，那么下面的几步也不会继续运行：
+
+:::tip
+
+- 对于需要渲染的文档，如果窗口的大小发生了变化，执行监听的 resize 方法。
+- 对于需要渲染的文档，如果页面发生了滚动，执行 scroll 方法。
+- 对于需要渲染的文档，执行帧动画回调，也就是 requestAnimationFrame 的回调。
+- 对于需要渲染的文档，执行 IntersectionObserver 的回调。
+- 对于需要渲染的文档，**重新渲染绘制用户界面**。
+- 判断 task 队列和 microTask 队列是否都为空，如果是的话，则进行 Idle 空闲周期的算法，判断是否要执行 requestIdleCallback 的回调函数。
+
+:::
 
 ## NodeJs 的 EventLoop
 
@@ -74,3 +94,7 @@ NodeJS 的 Event Loop 中，执行宏队列的回调任务有 6 个阶段，各�
 4. Timers Queue -> microtask -> I/O Queue -> microtask -> Check Queue -> microtask -> Close Callback Queue -> microtask -> Timers Queue ......
 
 ![NodeJs任务执行顺序](/img/NodeJs任务执行顺序.png)
+
+## 参考
+
+- [深入解析 EventLoop 和浏览器渲染、帧动画、空闲回调的关系](https://zhuanlan.zhihu.com/p/142742003)
