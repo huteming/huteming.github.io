@@ -4,14 +4,16 @@ const math = require('remark-math')
 const katex = require('rehype-katex')
 const directories = require('./directories')
 
+const TITLE = '特_明'
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: '特明',
+  title: TITLE,
   url: process.env.URL || 'https://huteming.github.io', // 您的网站网址
   baseUrl: '/', // 站点的相对路径
   onBrokenLinks: 'throw', // 检测到无效链接时的行为
   onBrokenMarkdownLinks: 'warn', // 在检测到无效 Markdown 链接时的行为
-  favicon: 'img/favicon.ico',
+  favicon: 'img/site/favicon.ico',
   trailingSlash: false, // 允许您自定义 URL/链接后是否添加结尾斜杠。
 
   organizationName: 'huteming', // 拥有此源的 GitHub 用户或组织。 用于部署命令。
@@ -47,10 +49,10 @@ module.exports = {
 
   themeConfig: {
     navbar: {
-      title: '笔记',
+      title: TITLE,
       logo: {
         alt: 'Logo',
-        src: 'img/logo.png',
+        src: 'img/site/logo.svg',
       },
       items: directories.map(({ label, docId }) => ({
         type: 'doc',
