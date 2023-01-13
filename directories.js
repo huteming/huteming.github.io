@@ -92,7 +92,7 @@ module.exports = [
   },
   {
     label: '总结',
-    docId: 'interview/html/如何理解HTML语义化',
+    docId: 'interview/html/cookie',
     sidebars: [
       {
         label: 'HTML',
