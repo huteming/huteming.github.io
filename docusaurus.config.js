@@ -69,6 +69,31 @@ module.exports = {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
     },
+
+    // Algolia DocSearch
+    algolia: {
+      appId: 'VVTGI6SZFO',
+      apiKey: '8f32feb4e84eed874cb1d805e3aeba9e',
+      indexName: 'huteming',
+      contextualSearch: true,
+
+      // 可选：声明哪些域名需要用 window.location 型的导航而不是 history.push。
+      // 适用于 Algolia 配置会爬取多个文档站点，而我们想要用 window.location.href 在它们之间跳转时。
+      // externalUrlRegex: 'blog\\.huteming\\.fun|huteming\\.github\\.io',
+
+      // Optional: Replace parts of the item URLs from Algolia.
+      // Useful when using the same search index for multiple deployments using a different baseUrl.
+      // You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      // replaceSearchResultPathname: {
+      //   from: '/docs/', // or as RegExp: /\/docs\//
+      //   to: '/',
+      // },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+    },
   },
 
   themes: ['@docusaurus/theme-live-codeblock'],
