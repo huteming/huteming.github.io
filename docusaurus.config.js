@@ -9,6 +9,7 @@ const TITLE = '特_明'
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: TITLE,
+  tagline: '一点点记录',
   url: process.env.URL || 'https://huteming.github.io', // 您的网站网址
   baseUrl: '/', // 站点的相对路径
   onBrokenLinks: 'throw', // 检测到无效链接时的行为
