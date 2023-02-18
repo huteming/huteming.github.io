@@ -91,47 +91,47 @@ module.exports = [
     ],
   },
 
-  // 总结
-  // {
-  //   label: '总结',
-  //   docId: 'interview/html/cookie',
-  //   sidebars: [
-  //     {
-  //       label: 'HTML',
-  //       dirName: 'interview/html',
-  //     },
-  //     {
-  //       label: 'CSS',
-  //       dirName: 'interview/css',
-  //     },
-  //     {
-  //       label: 'JS',
-  //       dirName: 'interview/js',
-  //     },
-  //     {
-  //       label: 'React',
-  //       dirName: 'interview/react',
-  //     },
-  //     {
-  //       label: 'HTTP',
-  //       dirName: 'interview/http',
-  //     },
-  //     {
-  //       label: 'webpack',
-  //       dirName: 'interview/webpack',
-  //     },
-  //     {
-  //       label: '性能优化',
-  //       dirName: 'interview/performance',
-  //     },
-  //     {
-  //       label: '微前端',
-  //       dirName: 'interview/micro',
-  //     },
-  //     {
-  //       label: '工程化',
-  //       dirName: 'interview/engineering',
-  //     },
-  //   ],
-  // },
+  // 面试
+  {
+    label: '面试',
+    docId: 'interview/html/cookie',
+    sidebars: [
+      {
+        label: 'HTML',
+        dirName: 'interview/html',
+      },
+      {
+        label: 'CSS',
+        dirName: 'interview/css',
+      },
+      {
+        label: 'JS',
+        dirName: 'interview/js',
+      },
+      {
+        label: 'React',
+        dirName: 'interview/react',
+      },
+      {
+        label: 'HTTP',
+        dirName: 'interview/http',
+      },
+      {
+        label: 'webpack',
+        dirName: 'interview/webpack',
+      },
+      {
+        label: '性能优化',
+        dirName: 'interview/performance',
+      },
+      {
+        label: '微前端',
+        dirName: 'interview/micro',
+      },
+      {
+        label: '工程化',
+        dirName: 'interview/engineering',
+      },
+    ],
+  },
 ]
