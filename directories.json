@@ -112,10 +112,6 @@
         "dirName": "interview/js"
       },
       {
-        "label": "React",
-        "dirName": "interview/react"
-      },
-      {
         "label": "HTTP",
         "dirName": "interview/http"
       },
@@ -124,16 +120,20 @@
         "dirName": "interview/webpack"
       },
       {
+        "label": "工程化",
+        "dirName": "interview/engineering"
+      },
+      {
+        "label": "React",
+        "dirName": "interview/react"
+      },
+      {
         "label": "性能优化",
         "dirName": "interview/performance"
       },
       {
         "label": "微前端",
         "dirName": "interview/micro"
-      },
-      {
-        "label": "工程化",
-        "dirName": "interview/engineering"
       }
     ]
   }
