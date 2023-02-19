@@ -2,7 +2,11 @@ const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 const math = require('remark-math')
 const katex = require('rehype-katex')
-const directories = require('./directories')
+
+// const directories = require('./directories')
+const fs = require('fs')
+// 为了取消缓存，实现 directories 更新后刷新页面
+const directories = JSON.parse(fs.readFileSync('./directories.json'))
 
 const TITLE = '特_明'
 
@@ -98,4 +102,6 @@ module.exports = {
   },
 
   themes: ['@docusaurus/theme-live-codeblock'],
+
+  plugins: ['./src/plugins/watch-file'],
 }

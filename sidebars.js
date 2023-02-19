@@ -1,4 +1,7 @@
-const directories = require('./directories')
+// const directories = require('./directories')
+const fs = require('fs')
+// 为了取消缓存，实现 directories 更新后刷新页面
+const directories = JSON.parse(fs.readFileSync('./directories.json'))
 
 let count = 1
 const sidebars = directories.reduce((side, { sidebars }) => {
