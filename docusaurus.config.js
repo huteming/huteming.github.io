@@ -75,7 +75,7 @@ module.exports = {
       darkTheme: darkCodeTheme,
     },
 
-    // Algolia DocSearch
+    // Algolia DocSearch: https://www.algolia.com/apps/VVTGI6SZFO/dashboard
     algolia: {
       appId: 'VVTGI6SZFO',
       apiKey: '8f32feb4e84eed874cb1d805e3aeba9e',
