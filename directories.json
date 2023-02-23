@@ -1,22 +1,30 @@
 [
   {
     "label": "HTML",
-    "docId": "html/script中的async和defer属性",
+    "docId": "html/theory/script中的async和defer属性",
     "sidebars": [
       {
-        "label": "HTML",
-        "dirName": "html"
+        "label": "知识点",
+        "dirName": "html/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "html/interview"
       }
     ]
   },
 
   {
     "label": "CSS",
-    "docId": "css/水平垂直居中",
+    "docId": "css/theory/层叠上下文",
     "sidebars": [
       {
-        "label": "CSS",
-        "dirName": "css"
+        "label": "知识点",
+        "dirName": "css/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "css/interview"
       }
     ]
   },
@@ -107,16 +115,8 @@
 
   {
     "label": "面试",
-    "docId": "interview/html/cookie",
+    "docId": "interview/micro/知识点",
     "sidebars": [
-      {
-        "label": "HTML",
-        "dirName": "interview/html"
-      },
-      {
-        "label": "CSS",
-        "dirName": "interview/css"
-      },
       {
         "label": "JS",
         "dirName": "interview/js"
