@@ -85,6 +85,16 @@
   },
   
   {
+    "label": "算法",
+    "docId": "algorithm/单调栈",
+    "sidebars": [
+      {
+        "dirName": "algorithm"
+      }
+    ]
+  },
+  
+  {
     "label": "代码",
     "docId": "code/compose",
     "sidebars": [
