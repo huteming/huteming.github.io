@@ -31,53 +31,97 @@
 
   {
     "label": "JS",
-    "docId": "js/reflect",
+    "docId": "js/theory/reflect",
     "sidebars": [
       {
-        "label": "JS",
-        "dirName": "js"
-      }
-    ]
-  },
-
-  {
-    "label": "React",
-    "docId": "react/changelog",
-    "sidebars": [
+        "label": "知识点",
+        "dirName": "js/theory"
+      },
       {
-        "label": "React",
-        "dirName": "react"
+        "label": "面试",
+        "dirName": "js/interview"
       }
     ]
   },
 
   {
     "label": "HTTP",
-    "docId": "http/响应状态码",
+    "docId": "http/theory/CORS",
     "sidebars": [
       {
-        "label": "HTTP",
-        "dirName": "http"
+        "label": "知识点",
+        "dirName": "http/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "http/interview"
       }
     ]
   },
 
   {
     "label": "工程化",
-    "docId": "engineering/mvc-vs-flux",
+    "docId": "engineering/theory/mvc-vs-flux",
     "sidebars": [
       {
-        "dirName": "engineering"
+        "label": "知识点",
+        "dirName": "engineering/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "engineering/interview"
+      }
+    ]
+  },
+
+  {
+    "label": "React",
+    "docId": "react/theory/changelog",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "react/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "react/interview"
+      }
+    ]
+  },
+
+  {
+    "label": "Vue",
+    "docId": "vue/interview/列表中key的作用",
+    "sidebars": [
+      {
+        "label": "面试",
+        "dirName": "vue/interview"
+      }
+    ]
+  },
+
+  {
+    "label": "微前端",
+    "docId": "microapp/theory/简介",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "microapp/theory"
       }
     ]
   },
 
   {
     "label": "Web 性能",
-    "docId": "performance/性能指标",
+    "docId": "performance/theory/性能指标",
     "sidebars": [
       {
-        "dirName": "performance"
+        "label": "知识点",
+        "dirName": "performance/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "performance/interview"
       }
     ]
   },
@@ -103,11 +147,10 @@
   },
   
   {
-    "label": "代码",
+    "label": "代码片段",
     "docId": "code/compose",
     "sidebars": [
       {
-        "label": "代码",
         "dirName": "code"
       }
     ]
@@ -119,45 +162,6 @@
     "sidebars": [
       {
         "dirName": "git"
-      }
-    ]
-  },
-
-  {
-    "label": "面试",
-    "docId": "interview/micro/知识点",
-    "sidebars": [
-      {
-        "label": "JS",
-        "dirName": "interview/js"
-      },
-      {
-        "label": "HTTP",
-        "dirName": "interview/http"
-      },
-      {
-        "label": "webpack",
-        "dirName": "interview/webpack"
-      },
-      {
-        "label": "工程化",
-        "dirName": "interview/engineering"
-      },
-      {
-        "label": "React",
-        "dirName": "interview/react"
-      },
-      {
-        "label": "Vue",
-        "dirName": "interview/vue"
-      },
-      {
-        "label": "性能优化",
-        "dirName": "interview/performance"
-      },
-      {
-        "label": "微前端",
-        "dirName": "interview/micro"
       }
     ]
   }
