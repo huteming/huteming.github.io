@@ -39,12 +39,12 @@ module.exports = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
         },
-        blog: {
-          routeBasePath: '/',
-          blogSidebarCount: 'ALL',
-          blogSidebarTitle: 'All Blog Posts',
-          showReadingTime: true,
-        },
+        // blog: {
+        //   routeBasePath: '/',
+        //   blogSidebarCount: 'ALL',
+        //   blogSidebarTitle: 'All Blog Posts',
+        //   showReadingTime: true,
+        // },
         theme: {
           customCss: [
             require.resolve('./src/css/atom.css'),
