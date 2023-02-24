@@ -112,6 +112,16 @@
       }
     ]
   },
+  
+  {
+    "label": "Git",
+    "docId": "git/修改commit内容",
+    "sidebars": [
+      {
+        "dirName": "git"
+      }
+    ]
+  },
 
   {
     "label": "面试",
