@@ -81,3 +81,7 @@ so_keepalive=30m::10
 # leave the probe interval (TCP_KEEPINTVL) at its system default,
 # and set the probes count (TCP_KEEPCNT) to 10 probes.
 ```
+
+## 参考
+
+- [TCP Keep-Alive 和 HTTP Keep-Alive 是一个东西吗？](https://bbs.huaweicloud.com/blogs/285330)
