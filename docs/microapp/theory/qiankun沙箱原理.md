@@ -241,3 +241,4 @@ class ProxySandbox {
 ## 参考
 
 - [qiankun 运行时沙箱源码解析](https://mdnice.com/writing/59a55e6d76264290a07322d472ec8478)
+- [微前端连载](https://juejin.cn/post/6846687602439897101#heading-22)
