@@ -1,15 +1,10 @@
 [
     {
         "label": "HTML",
-        "docId": "html/theory/script中的async和defer属性",
+        "docId": "html/面试题",
         "sidebars": [
             {
-                "label": "知识点",
-                "dirName": "html/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "html/interview"
+                "dirName": "html"
             }
         ]
     },
