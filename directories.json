@@ -11,15 +11,10 @@
 
   {
     "label": "JS",
-    "docId": "js/theory/reflect",
+    "docId": "js/面试题",
     "sidebars": [
       {
-        "label": "知识点",
-        "dirName": "js/theory"
-      },
-      {
-        "label": "面试",
-        "dirName": "js/interview"
+        "dirName": "js"
       }
     ]
   },
