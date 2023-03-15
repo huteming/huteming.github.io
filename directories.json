@@ -10,21 +10,6 @@
   },
 
   {
-    "label": "CSS",
-    "docId": "css/theory/层叠上下文",
-    "sidebars": [
-      {
-        "label": "知识点",
-        "dirName": "css/theory"
-      },
-      {
-        "label": "面试",
-        "dirName": "css/interview"
-      }
-    ]
-  },
-
-  {
     "label": "JS",
     "docId": "js/theory/reflect",
     "sidebars": [
