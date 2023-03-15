@@ -1,167 +1,167 @@
 [
-    {
-        "label": "HTML",
-        "docId": "html/面试题",
-        "sidebars": [
-            {
-                "dirName": "html"
-            }
-        ]
-    },
+  {
+    "label": "HTML/CSS",
+    "docId": "html/面试题",
+    "sidebars": [
+      {
+        "dirName": "html"
+      }
+    ]
+  },
 
-    {
-        "label": "CSS",
-        "docId": "css/theory/层叠上下文",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "css/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "css/interview"
-            }
-        ]
-    },
+  {
+    "label": "CSS",
+    "docId": "css/theory/层叠上下文",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "css/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "css/interview"
+      }
+    ]
+  },
 
-    {
-        "label": "JS",
-        "docId": "js/theory/reflect",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "js/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "js/interview"
-            }
-        ]
-    },
+  {
+    "label": "JS",
+    "docId": "js/theory/reflect",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "js/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "js/interview"
+      }
+    ]
+  },
 
-    {
-        "label": "HTTP",
-        "docId": "http/theory/CORS",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "http/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "http/interview"
-            }
-        ]
-    },
+  {
+    "label": "HTTP",
+    "docId": "http/theory/CORS",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "http/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "http/interview"
+      }
+    ]
+  },
 
-    {
-        "label": "工程化",
-        "docId": "engineering/theory/mvc-vs-flux",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "engineering/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "engineering/interview"
-            }
-        ]
-    },
+  {
+    "label": "工程化",
+    "docId": "engineering/theory/mvc-vs-flux",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "engineering/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "engineering/interview"
+      }
+    ]
+  },
 
-    {
-        "label": "React",
-        "docId": "react/theory/changelog",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "react/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "react/interview"
-            }
-        ]
-    },
+  {
+    "label": "React",
+    "docId": "react/theory/changelog",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "react/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "react/interview"
+      }
+    ]
+  },
 
-    {
-        "label": "Vue",
-        "docId": "vue/theory/vue原理",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "vue/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "vue/interview"
-            }
-        ]
-    },
+  {
+    "label": "Vue",
+    "docId": "vue/theory/vue原理",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "vue/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "vue/interview"
+      }
+    ]
+  },
 
-    {
-        "label": "微前端",
-        "docId": "microapp/theory/简介",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "microapp/theory"
-            }
-        ]
-    },
+  {
+    "label": "微前端",
+    "docId": "microapp/theory/简介",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "microapp/theory"
+      }
+    ]
+  },
 
-    {
-        "label": "Web 性能",
-        "docId": "performance/theory/性能指标",
-        "sidebars": [
-            {
-                "label": "知识点",
-                "dirName": "performance/theory"
-            },
-            {
-                "label": "面试",
-                "dirName": "performance/interview"
-            }
-        ]
-    },
+  {
+    "label": "Web 性能",
+    "docId": "performance/theory/性能指标",
+    "sidebars": [
+      {
+        "label": "知识点",
+        "dirName": "performance/theory"
+      },
+      {
+        "label": "面试",
+        "dirName": "performance/interview"
+      }
+    ]
+  },
 
-    {
-        "label": "Web 安全",
-        "docId": "security/常见攻击类型",
-        "sidebars": [
-            {
-                "dirName": "security"
-            }
-        ]
-    },
+  {
+    "label": "Web 安全",
+    "docId": "security/常见攻击类型",
+    "sidebars": [
+      {
+        "dirName": "security"
+      }
+    ]
+  },
 
-    {
-        "label": "算法",
-        "docId": "algorithm/单调栈",
-        "sidebars": [
-            {
-                "dirName": "algorithm"
-            }
-        ]
-    },
+  {
+    "label": "算法",
+    "docId": "algorithm/单调栈",
+    "sidebars": [
+      {
+        "dirName": "algorithm"
+      }
+    ]
+  },
 
-    {
-        "label": "代码片段",
-        "docId": "code/compose",
-        "sidebars": [
-            {
-                "dirName": "code"
-            }
-        ]
-    },
+  {
+    "label": "代码片段",
+    "docId": "code/compose",
+    "sidebars": [
+      {
+        "dirName": "code"
+      }
+    ]
+  },
 
-    {
-        "label": "Git",
-        "docId": "git/修改commit内容",
-        "sidebars": [
-            {
-                "dirName": "git"
-            }
-        ]
-    }
+  {
+    "label": "Git",
+    "docId": "git/修改commit内容",
+    "sidebars": [
+      {
+        "dirName": "git"
+      }
+    ]
+  }
 ]
