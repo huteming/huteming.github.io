@@ -36,15 +36,10 @@
 
   {
     "label": "工程化",
-    "docId": "engineering/theory/mvc-vs-flux",
+    "docId": "engineering/面试题",
     "sidebars": [
       {
-        "label": "知识点",
-        "dirName": "engineering/theory"
-      },
-      {
-        "label": "面试",
-        "dirName": "engineering/interview"
+        "dirName": "engineering"
       }
     ]
   },
