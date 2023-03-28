@@ -4,7 +4,7 @@
 注意: [MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API)的解释中，只是说使用 API，可以在后台线程中运行一个脚本，
 并没有说创建一个后台线程。
 
-## Web worker 和 service worker
+## 1. Web worker 和 service worker
 
 ### 相同点
 
@@ -19,6 +19,26 @@
 4. `web worker` 可以使用大部分 `window` 对象的方法和属性，包括 `WebSockets`、`Storage`、`XMLHttpRequest` 等
 5. `service worker` 不能使用 `Storage`、`XMLHttpRequest`，并且出于安全考量，只能由 `HTTPS` 承载，**毕竟修改网络请求的能力暴露给中间人攻击会非常危险**。
 
-## Service Workers
+## 2. Service Workers
 
 `Service Workers` 一般作为 web 应用程序、浏览器和网络（如果可用）之间的**代理服务**。他们旨在创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动，更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
+
+## 3. 用例
+
+### Web Worker
+
+`Web Worker ` 的用例通常与繁重的计算相关，以避免阻塞 UI。
+
+示例: 构建视频游戏希望让主线程尽可能空闲，以处理用户输入和动画。为实现这一目标，他们使用网络工作者在单独的线程上运行游戏逻辑和状态维护。
+
+### Service Worker
+
+`Service Worker` 的任务通常与充当网络代理、处理后台任务以及缓存和离线等相关。
+
+示例: 在播客 PWA 中，可能希望允许用户下载完整的剧集以便在离线时收听。为此，可以使用服务工作者，特别是后台获取 API。这样，如果用户在下载剧集时关闭选项卡，则不必中断任务。
+
+## 4. 实现
+
+- Web Worker: [Comlink](https://github.com/GoogleChromeLabs/comlink)
+
+- Service Worker: [Workbox](https://developer.chrome.com/docs/workbox/)。

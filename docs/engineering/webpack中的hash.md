@@ -24,3 +24,9 @@ stackoverflow 上的一个[解释](https://stackoverflow.com/questions/35176489/
 - non-initial 是可以延迟加载的块。可能会出现在使用 `动态导入(dynamic imports)` 或者 `SplitChunksPlugin` 时。
 
 每个 chunk 都有对应的 **asset(资源)**。资源，是指输出文件（即打包结果）。
+
+## 问题
+
+1. 注释修改后，会影响 `contentHash` 吗？
+
+- 取决于是否保留注释。如果注释保留，则会影响；不保留注释，不影响 `contentHash`。`webpack` 版本 `5.76.3`。
