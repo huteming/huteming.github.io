@@ -61,15 +61,10 @@
 
   {
     "label": "Vue",
-    "docId": "vue/theory/vue原理",
+    "docId": "vue/面试题",
     "sidebars": [
       {
-        "label": "知识点",
-        "dirName": "vue/theory"
-      },
-      {
-        "label": "面试",
-        "dirName": "vue/interview"
+        "dirName": "vue"
       }
     ]
   },
