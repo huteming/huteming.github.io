@@ -41,9 +41,9 @@ function sameVnode (a, b) {
 
 2. 更新 children
 
-1. 如果旧节点为空，那么就是新增新的节点
-1. 如果新节点为空，那么就是删除旧的节点
-1. 都存在，会执行 `updateChildren` 进行深度优先的递归更新
+- 如果旧节点为空，那么就是新增新的节点
+- 如果新节点为空，那么就是删除旧的节点
+- 都存在，会执行 `updateChildren` 进行深度优先的递归更新
 
 ## 3. updateChildren
 
