@@ -1,0 +1,48 @@
+```css
+.wave {
+  background: linear-gradient(
+        -45deg,
+        transparent 42%,
+        red 0,
+        red 58%,
+        transparent 0
+      ) 0 100%, linear-gradient(
+        45deg,
+        transparent 42%,
+        red 0,
+        red 58%,
+        transparent 0
+      ) 0.2em 100%;
+  background-repeat: repeat-x;
+  background-repeat: no-repeat;
+  background-size: 0.4em 0.2em;
+}
+```
+
+## 知识点
+
+### background
+
+[MDN 详细说明](https://developer.mozilla.org/zh-CN/docs/Web/CSS/background)
+
+缩写语法: `<bg-image> <position>`
+
+可以指定多层，使用逗号分隔每个背景层。
+
+### linear-gradient
+
+[MDN 详细说明](https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient)
+
+<div class='text--center'>
+  <img src='/img/doc/linear-gradient.png' alt='linear-gradient' />
+</div>
+
+**渐变线**由包含渐变图形的容器的中心点和一个角度来定义的。
+
+**起始点**由渐变线和过容器顶点的垂直线之间的交叉点来定义。（垂直线跟渐变线在同一象限内）
+
+颜色终止列表中颜色的终止点应该是依次递增的。如果后面的颜色终止点小于前面颜色的终止点则后面的会被覆盖，从而创建一个硬转换。下面的变化是从红色到黄色在 40%的位置，然后过渡从黄色到蓝色终止于 65%的位置处。
+
+```css
+linear-gradient(red 40%, yellow 30%, blue 65%);
+```
