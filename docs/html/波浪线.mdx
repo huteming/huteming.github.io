@@ -1,6 +1,9 @@
-```css
-.wave {
-  background: linear-gradient(
+## 效果预览
+
+```jsx live
+function Wave() {
+  const styles = {
+    background: `linear-gradient(
         -45deg,
         transparent 42%,
         red 0,
@@ -12,10 +15,16 @@
         red 0,
         red 58%,
         transparent 0
-      ) 0.2em 100%;
-  background-repeat: repeat-x;
-  background-repeat: no-repeat;
-  background-size: 0.4em 0.2em;
+      ) 0.2em 100%`,
+    'background-repeat': 'repeat-x',
+    'background-size': '0.4em 0.2em',
+  }
+
+  return (
+    <div>
+      <span style={styles}>hello world</span>
+    </div>
+  )
 }
 ```
 

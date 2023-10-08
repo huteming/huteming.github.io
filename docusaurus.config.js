@@ -94,7 +94,10 @@ module.exports = {
     },
   },
 
-  themes: ['@docusaurus/theme-live-codeblock'],
+  themes: [
+    // 可交互的代码编辑器
+    '@docusaurus/theme-live-codeblock',
+  ],
 
   plugins: ['./src/plugins/watch-file'],
 }
