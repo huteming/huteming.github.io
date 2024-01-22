@@ -62,7 +62,7 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  plugins: [],
+  plugins: ['./src/plugins/blog-data/index.ts'],
 }
 
 export default config
