@@ -62,7 +62,14 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
-  plugins: ['./src/plugins/blog-data/index.ts'],
+  plugins: [
+    [
+      './src/plugins/blog-data/index.ts',
+      {
+        blogSidebarCount: 5,
+      } satisfies Preset.Options['blog'],
+    ],
+  ],
 }
 
 export default config
