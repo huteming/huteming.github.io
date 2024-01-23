@@ -49,7 +49,7 @@ const config: Config = {
       title: TITLE,
       logo: {
         alt: 'Logo',
-        src: 'img/site/logo.jpeg',
+        src: 'img/site/logo.png',
       },
       items: [],
     },
