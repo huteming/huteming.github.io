@@ -14,14 +14,19 @@ function Card(props) {
   const { blog } = props
   const { metadata } = blog
   const { permalink, title, readingTime, formattedDate, tags } = metadata
+
+  const hasTag = (tag: string): boolean => {
+    return !!tags?.find((t) => t.label === tag)
+  }
+
   const imgBind = (() => {
-    if (tags?.includes('css')) {
+    if (hasTag('css')) {
       return {
         alt: 'css',
         src: imgCss,
       }
     }
-    if (tags?.includes('html')) {
+    if (hasTag('html')) {
       return {
         alt: 'html',
         src: imgHtml,
