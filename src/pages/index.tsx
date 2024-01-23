@@ -1,9 +1,6 @@
-import clsx from 'clsx'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
-import HomepageFeatures from '@site/src/components/HomepageFeatures'
-import Heading from '@theme/Heading'
 import useGlobalData from '@docusaurus/useGlobalData'
 
 import styles from './index.module.css'
@@ -11,7 +8,7 @@ import styles from './index.module.css'
 function Card(props) {
   const { blog } = props
   const { metadata } = blog
-  const { permalink, title } = metadata
+  const { permalink, title, readingTime, formattedDate } = metadata
 
   return (
     <article className={styles.card}>
@@ -19,6 +16,10 @@ function Card(props) {
         <div className={styles.cardIcon}></div>
         <div className={styles.cardTitle}>
           <Link to={permalink}>{title}</Link>
+        </div>
+
+        <div className={styles.cardTip}>
+          {formattedDate} • 阅读需 {Math.ceil(readingTime) || 1} 分钟
         </div>
       </div>
 
@@ -35,7 +36,7 @@ export default function Home(): JSX.Element {
   const globalData = useGlobalData()
   const blogPluginData: any = globalData?.['docusaurus-plugin-content-blog']?.['default']
   const { blogs } = blogPluginData
-  // console.log('全局博客的内容：', blogPluginData)
+  console.log('全局博客的内容：', blogPluginData)
 
   return (
     <Layout description={siteConfig.tagline}>
