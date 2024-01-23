@@ -14,11 +14,13 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  trailingSlash: false, // 自定义 URL/链接后是否添加末尾斜杠
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'huteming', // Usually your GitHub org/user name.
-  projectName: 'huteming.github.io', // Usually your repo name.
+  organizationName: 'huteming', // 拥有部署仓库的 GitHub 用户或组织
+  projectName: 'huteming.github.io', // 部署仓库的名字
+  deploymentBranch: 'gh-pages', // 静态文件部署到的分支名称
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
