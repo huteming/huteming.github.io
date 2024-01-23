@@ -1,5 +1,6 @@
 ---
-tags: [js]
+tags: [ts]
+image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/e22aad950be236fec9db8f2aa660d0fd?_a=AQAEufR
 ---
 
 在做 [ts 类型练习](https://typehero.dev/explore)的时候，碰到需要比较两个类型是否相同，看到答案里有这么一种方法

@@ -62,6 +62,14 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
 
+  scripts: [
+    // 图标库: https://fontawesome.com/search
+    {
+      src: 'https://kit.fontawesome.com/3e34564138.js',
+      async: true,
+    },
+  ],
+
   plugins: [
     [
       './src/plugins/blog-data/index.ts',

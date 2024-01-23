@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 import useGlobalData from '@docusaurus/useGlobalData'
+import type { BlogPost } from '@docusaurus/plugin-content-blog'
 import { log } from '../utils'
 
 import styles from './index.module.css'
@@ -10,14 +11,21 @@ import styles from './index.module.css'
 import imgCss from '@site/static/img/icons/css3.webp'
 import imgHtml from '@site/static/img/icons/html.webp'
 import imgJS from '@site/static/img/icons/js.png'
+import imgTS from '@site/static/img/icons/ts.png'
 
-function Card(props) {
+interface ICardProps {
+  blog: BlogPost
+}
+
+function Card(props: ICardProps) {
   const { blog } = props
   const { metadata } = blog
-  const { permalink, title, readingTime, formattedDate, tags } = metadata
+  const { permalink, title, readingTime, formattedDate, frontMatter } = metadata
+  const { tags, image } = frontMatter
 
   const hasTag = (tag: string): boolean => {
-    return !!tags?.find((t) => t.label === tag)
+    // return !!tags?.find((t) => t.label === tag)
+    return tags.includes(tag)
   }
 
   const imgBind = (() => {
@@ -33,11 +41,20 @@ function Card(props) {
         src: imgHtml,
       }
     }
+    if (hasTag('ts')) {
+      return {
+        alt: 'ts',
+        src: imgTS,
+      }
+    }
+
     return {
       alt: 'js',
       src: imgJS,
     }
   })()
+
+  const cover = image || 'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/61b95af3fa2a7c781ee52899fcaba008?_a=AQAEufR'
 
   return (
     <article className={styles.card}>
@@ -55,9 +72,11 @@ function Card(props) {
         </div>
       </div>
 
-      <div className={styles.cardCover}></div>
+      <img className={styles.cardCover} alt='' src={cover} />
 
-      <div className={styles.cardFooter}></div>
+      <div className={styles.cardFooter}>
+        <i className='fa-regular fa-share-from-square'></i>
+      </div>
     </article>
   )
 }
