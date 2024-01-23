@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
 import useGlobalData from '@docusaurus/useGlobalData'
+import { log } from '../utils'
 
 import styles from './index.module.css'
 
@@ -67,7 +68,7 @@ export default function Home(): JSX.Element {
   const globalData = useGlobalData()
   const blogPluginData: any = globalData?.['docusaurus-plugin-content-blog']?.['default']
   const { blogs } = blogPluginData
-  console.log('全局博客的内容：', blogPluginData)
+  log('全局博客的内容：', blogPluginData)
 
   return (
     <Layout description={siteConfig.tagline}>
