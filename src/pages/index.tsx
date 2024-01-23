@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import Layout from '@theme/Layout'
@@ -5,15 +6,40 @@ import useGlobalData from '@docusaurus/useGlobalData'
 
 import styles from './index.module.css'
 
+import imgCss from '@site/static/img/icons/css3.webp'
+import imgHtml from '@site/static/img/icons/html.webp'
+import imgJS from '@site/static/img/icons/js.png'
+
 function Card(props) {
   const { blog } = props
   const { metadata } = blog
-  const { permalink, title, readingTime, formattedDate } = metadata
+  const { permalink, title, readingTime, formattedDate, tags } = metadata
+  const imgBind = (() => {
+    if (tags?.includes('css')) {
+      return {
+        alt: 'css',
+        src: imgCss,
+      }
+    }
+    if (tags?.includes('html')) {
+      return {
+        alt: 'html',
+        src: imgHtml,
+      }
+    }
+    return {
+      alt: 'js',
+      src: imgJS,
+    }
+  })()
 
   return (
     <article className={styles.card}>
       <div className={styles.cardHeader}>
-        <div className={styles.cardIcon}></div>
+        <div className={styles.cardIcon}>
+          <img {...imgBind} />
+        </div>
+
         <div className={styles.cardTitle}>
           <Link to={permalink}>{title}</Link>
         </div>
