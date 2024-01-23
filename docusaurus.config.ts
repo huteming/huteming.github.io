@@ -35,9 +35,7 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-        },
+        docs: false,
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
