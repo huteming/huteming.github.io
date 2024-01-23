@@ -1,1 +1,0 @@
-(self.webpackChunkhuteming_github_io=self.webpackChunkhuteming_github_io||[]).push([[80],{7017:function(t){"use strict";t.exports=JSON.parse('{"allTagsPath":"/tags","slug":"prettier","name":"prettier","count":1,"permalink":"/tags/prettier"}')}}]);

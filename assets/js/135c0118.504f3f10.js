@@ -1,1 +1,0 @@
-(self.webpackChunkhuteming_github_io=self.webpackChunkhuteming_github_io||[]).push([[56],{4240:function(t){"use strict";t.exports=JSON.parse('{"allTagsPath":"/tags","slug":"\u6d4f\u89c8\u5668","name":"\u6d4f\u89c8\u5668","count":1,"permalink":"/tags/\u6d4f\u89c8\u5668"}')}}]);

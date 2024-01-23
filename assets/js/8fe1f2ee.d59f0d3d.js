@@ -1,1 +1,0 @@
-(self.webpackChunkhuteming_github_io=self.webpackChunkhuteming_github_io||[]).push([[776],{2082:function(s){"use strict";s.exports=JSON.parse('{"allTagsPath":"/tags","slug":"js","name":"js","count":1,"permalink":"/tags/js"}')}}]);
