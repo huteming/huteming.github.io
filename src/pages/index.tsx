@@ -34,8 +34,8 @@ function Card(props: ICardProps) {
     }
 
     return {
-      alt: '',
-      src: require('@site/static/img/icons/js.png').default,
+      alt: 'code',
+      src: require('@site/static/img/icons/code.png').default,
     }
   })()
 
@@ -44,9 +44,7 @@ function Card(props: ICardProps) {
   return (
     <article className={styles.card}>
       <div className={styles.cardHeader}>
-        <div className={styles.cardIcon}>
-          <img {...imgBind} />
-        </div>
+        <img className={styles.cardIcon} {...imgBind} />
 
         <div className={styles.cardTitle}>
           <Link to={permalink}>{title}</Link>
