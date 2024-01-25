@@ -8,12 +8,6 @@ import { log } from '../utils'
 
 import styles from './index.module.css'
 
-import imgCss from '@site/static/img/icons/css3.webp'
-import imgHtml from '@site/static/img/icons/html.webp'
-import imgJS from '@site/static/img/icons/js.png'
-import imgTS from '@site/static/img/icons/ts.png'
-import imgPrettier from '@site/static/img/icons/prettier.png'
-
 interface ICardProps {
   blog: BlogPost
 }
@@ -24,40 +18,24 @@ function Card(props: ICardProps) {
   const { permalink, title, readingTime, formattedDate, frontMatter } = metadata
   const { tags, image } = frontMatter
 
-  const hasTag = (tag: string): boolean => {
-    // return !!tags?.find((t) => t.label === tag)
-    return tags.includes(tag)
-  }
-
   const imgBind = (() => {
-    if (hasTag('css')) {
-      return {
-        alt: 'css',
-        src: imgCss,
-      }
-    }
-    if (hasTag('html')) {
-      return {
-        alt: 'html',
-        src: imgHtml,
-      }
-    }
-    if (hasTag('ts')) {
-      return {
-        alt: 'ts',
-        src: imgTS,
-      }
-    }
-    if (hasTag('prettier')) {
-      return {
-        alt: 'prettier',
-        src: imgPrettier,
+    for (const tag of tags) {
+      const tagStr = typeof tag === 'string' ? tag : tag.label
+
+      try {
+        const icon = require(`@site/static/img/icons/${tagStr}.png`).default
+        return {
+          alt: tagStr,
+          src: icon,
+        }
+      } catch (err) {
+        // console.error(err)
       }
     }
 
     return {
-      alt: 'js',
-      src: imgJS,
+      alt: '',
+      src: require('@site/static/img/icons/js.png').default,
     }
   })()
 
