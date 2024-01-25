@@ -7,7 +7,7 @@ const TITLE = '特_明'
 const config: Config = {
   title: TITLE,
   tagline: '一点点积累', // 网站标语
-  favicon: 'img/site/favicon.ico',
+  favicon: 'img/site/logo/favicon.ico',
 
   // Set the production url of your site here
   url: process.env.URL || 'https://huteming.github.io',
@@ -51,7 +51,7 @@ const config: Config = {
       title: TITLE,
       logo: {
         alt: 'Logo',
-        src: 'img/site/logo.png',
+        src: 'site/logo/logo.png',
       },
       items: [],
     },

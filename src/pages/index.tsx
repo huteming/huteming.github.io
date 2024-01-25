@@ -23,7 +23,7 @@ function Card(props: ICardProps) {
       const tagStr = typeof tag === 'string' ? tag : tag.label
 
       try {
-        const icon = require(`@site/static/img/icons/${tagStr}.png`).default
+        const icon = require(`@site/static/site/tag-icon/${tagStr}.png`).default
         return {
           alt: tagStr,
           src: icon,
@@ -35,7 +35,7 @@ function Card(props: ICardProps) {
 
     return {
       alt: 'code',
-      src: require('@site/static/img/icons/code.png').default,
+      src: require('@site/static/site/tag-icon/code.png').default,
     }
   })()
 
