@@ -12,6 +12,7 @@ import imgCss from '@site/static/img/icons/css3.webp'
 import imgHtml from '@site/static/img/icons/html.webp'
 import imgJS from '@site/static/img/icons/js.png'
 import imgTS from '@site/static/img/icons/ts.png'
+import imgPrettier from '@site/static/img/icons/prettier.png'
 
 interface ICardProps {
   blog: BlogPost
@@ -45,6 +46,12 @@ function Card(props: ICardProps) {
       return {
         alt: 'ts',
         src: imgTS,
+      }
+    }
+    if (hasTag('prettier')) {
+      return {
+        alt: 'prettier',
+        src: imgPrettier,
       }
     }
 
