@@ -16,7 +16,7 @@ function Card(props: ICardProps) {
   const { blog } = props
   const { metadata } = blog
   const { permalink, title, readingTime, formattedDate, frontMatter } = metadata
-  const { tags, image } = frontMatter
+  const { tags = [], image } = frontMatter
 
   const imgBind = (() => {
     for (const tag of tags) {
