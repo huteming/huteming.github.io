@@ -75,6 +75,10 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
+
+    liveCodeBlock: {
+      playgroundPosition: 'bottom',
+    },
   } satisfies Preset.ThemeConfig,
 
   scripts: [
@@ -84,6 +88,8 @@ const config: Config = {
       async: true,
     },
   ],
+
+  themes: ['@docusaurus/theme-live-codeblock'],
 
   plugins: [
     'docusaurus-plugin-sass',
