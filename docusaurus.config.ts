@@ -6,7 +6,7 @@ const TITLE = '特_明'
 
 const config: Config = {
   title: TITLE,
-  tagline: '一点点积累', // 网站标语
+  tagline: '一点点记录', // 网站标语
   favicon: 'img/site/logo/favicon.ico',
 
   // Set the production url of your site here
@@ -37,7 +37,9 @@ const config: Config = {
     [
       'classic',
       {
-        docs: false,
+        docs: {
+          sidebarPath: './sidebars.ts',
+        },
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
@@ -53,7 +55,14 @@ const config: Config = {
         alt: 'Logo',
         src: 'site/logo/logo.png',
       },
-      items: [],
+      items: [
+        {
+          label: 'Docs',
+          sidebarId: 'docsSidebar',
+          type: 'docSidebar',
+          position: 'left',
+        },
+      ],
     },
 
     prism: {
