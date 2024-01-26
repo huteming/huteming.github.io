@@ -77,6 +77,7 @@ const config: Config = {
   ],
 
   plugins: [
+    'docusaurus-plugin-sass',
     [
       './src/plugins/blog-data/index.ts',
       {

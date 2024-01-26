@@ -2,20 +2,27 @@
   padding: 40px 64px 64px 64px;
 }
 
-.header {
-  height: 56px;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  font-size: 15px;
-  line-height: 20px;
-}
-
-.content {
+.centerLayout {
   display: grid;
   grid-template-columns: repeat(auto-fill, 280px);
   justify-content: center;
   gap: 32px;
+}
+
+.header {
+  @extend .centerLayout;
+}
+
+.headerFilter {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  @extend .centerLayout;
+  margin-top: 32px;
 }
 
 .card {
@@ -64,6 +71,7 @@
   height: 160px;
   margin-top: 8px;
   border-radius: 12px;
+  object-fit: cover;
   overflow: hidden;
 }
 

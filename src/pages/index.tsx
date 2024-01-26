@@ -6,7 +6,7 @@ import useGlobalData from '@docusaurus/useGlobalData'
 import type { BlogPost } from '@docusaurus/plugin-content-blog'
 import { log } from '../utils'
 
-import styles from './index.module.css'
+import styles from './index.module.scss'
 
 interface ICardProps {
   blog: BlogPost
@@ -39,7 +39,9 @@ function Card(props: ICardProps) {
     }
   })()
 
-  const cover = image || 'https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/61b95af3fa2a7c781ee52899fcaba008?_a=AQAEufR'
+  // https://res.cloudinary.com/daily-now/image/upload/f_auto/v1/placeholders/1
+  // https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/61b95af3fa2a7c781ee52899fcaba008?_a=AQAEufR
+  const cover = image || 'https://res.cloudinary.com/daily-now/image/upload/f_auto/v1/placeholders/1'
 
   return (
     <article className={styles.card}>
@@ -75,7 +77,9 @@ export default function Home(): JSX.Element {
   return (
     <Layout description={siteConfig.tagline}>
       <main className={styles.wrapper}>
-        {/* <header className={styles.header}>Feed settings</header> */}
+        {/* <header className={styles.header}>
+          <div className={styles.headerFilter}>Feed settings</div>
+        </header> */}
 
         <div className={styles.content}>
           {blogs.map((blog) => (
