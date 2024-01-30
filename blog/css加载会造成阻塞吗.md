@@ -99,13 +99,13 @@ image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/
 
 实际结果:
 
-![](/img/css-block/block-JS.gif)
+![](/img/css-block/block-js.gif)
 
 由上图我们可以看出，位于 css 加载语句前的那个 JS 代码先执行了，但是位于 css 加载语句后面的代码迟迟没有执行，直到 css 加载完成后，它才执行。这也就说明了，**css 加载会阻塞后面的 JS 语句的执行**。
 
 详细结果看下图(css 加载用了 5600+ms):
 
-![](/img/css-block/block-JS-log.png)
+![](/img/css-block/block-js-log.png)
 
 ## DOMContentLoaded
 
@@ -169,7 +169,7 @@ image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/
 
 复制代码实验结果如下图：
 
-![](/img/css-block/block-loaded-css+JS.gif)
+![](/img/css-block/block-loaded-css+js.gif)
 
 我们可以看到，**只有在 css 加载完成后，才会触发 DOMContentLoaded 事件**。
 
