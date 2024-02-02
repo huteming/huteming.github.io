@@ -1,0 +1,59 @@
+---
+tags: [css]
+---
+
+默认情况下，一个 div 元素的宽度是父容器内容的 100%，哪怕这个 div 的子元素的宽度超出了。
+
+可以看到下面这个示例，container 的背景色并不是和内容等宽的。
+
+```tsx live
+function Scrollable() {
+  const styleScrollable = {
+    height: '100px',
+    backgroundColor: 'antiquewhite',
+    overflow: 'auto'
+  }
+
+  const styleContainer = {
+    // width: 'max-content',
+    height: '50px',
+    display: 'flex',
+    alignItems: 'center',
+    backgroundColor: 'lightblue',
+    gap: '20px',
+  }
+
+  const styleItem = {
+    flexGrow: '1',
+    flexShrink: '0',
+    // flexBasis: '200px',
+    width: '200px',
+    backgroundColor: 'cadetblue',
+  }
+
+  return (
+    <div class="scrollable" style={styleScrollable}>
+      <p>scrollable</p>
+
+      <div class="container" style={styleContainer}>
+        <div style={styleItem}>item</div>
+        <div style={styleItem}>item</div>
+        <div style={styleItem}>item</div>
+        <div style={styleItem}>item</div>
+        <div style={styleItem}>item</div>
+        <div style={styleItem}>item</div>
+      </div>
+    </div>
+  )
+}
+```
+
+要解决这个问题，可以给 container 一个显示的宽度。比如 `width: max-content`
+
+## flex basic
+
+**但是这里有个特别需要注意的**
+
+如果子元素是通过 flex 布局的 flex-basis 计算宽度撑宽的，那这里的 width 又会出现问题。
+
+所以，务必要给容器元素和子元素都加上 `width` 属性。
