@@ -40,7 +40,12 @@ export default function BlogCard(props: Props) {
   const readingTimeStr = `${Math.ceil(readingTime)} mins`
 
   return (
-    <Card>
+    <Card
+      elevation={1}
+      sx={{
+        boxShadow: 'rgba(140, 152, 164, 0.176) 0px 10px 40px 10px',
+      }}
+    >
       <CardMedia sx={{ height: 160 }} image={mediaImage} title='image' />
 
       <CardContent>

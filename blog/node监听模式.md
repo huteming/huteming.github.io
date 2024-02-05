@@ -2,6 +2,10 @@
 tags: [nodejs]
 ---
 
+在 nodejs 中实现监听模式的几种方案
+
+<!-- truncate -->
+
 nodejs 在 [v18.11.0](https://nodejs.org/en/blog/release/v18.11.0/) 新增了 `--watch` 模式。
 
 **注意这只是试验性质的**
