@@ -10,7 +10,8 @@ import Divider from '@mui/material/Divider'
 import Stack from '@mui/material/Stack'
 import { Nullable } from '@site/src/utils'
 import Box from '@mui/material/Box'
-import Link from '@docusaurus/Link'
+import Link from '@mui/material/Link'
+import DocusaurusLink from '@docusaurus/Link'
 
 interface Props {
   image: Nullable<string>
@@ -43,11 +44,21 @@ export default function BlogCard(props: Props) {
       <CardMedia sx={{ height: 160 }} image={mediaImage} title='image' />
 
       <CardContent>
-        <Link to={link}>
-          <Typography gutterBottom variant='h5' component='div'>
+        <Typography gutterBottom variant='h5' component='div'>
+          <Link
+            component={DocusaurusLink}
+            to={link}
+            underline='hover'
+            sx={{
+              color: 'inherit',
+              ':hover': {
+                color: 'inherit',
+              },
+            }}
+          >
             {title}
-          </Typography>
-        </Link>
+          </Link>
+        </Typography>
 
         <Typography variant='body2' color='text.secondary'>
           {description}
