@@ -16,7 +16,7 @@ export default {
     defaultLocale: 'en',
     locales: ['en', 'fr'],
   },
-};
+}
 ```
 
 ## Translate a doc
@@ -41,7 +41,7 @@ npm run start -- --locale fr
 
 Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
 
-:::caution
+:::warning
 
 In development, you can only use one locale at a time.
 
@@ -66,7 +66,7 @@ export default {
       ],
     },
   },
-};
+}
 ```
 
 The locale dropdown now appears in your navbar:

@@ -12,7 +12,7 @@ HTTP 本身提供一个用于权限控制和认证的通用框架, [MDN HTTP 身
 
 ![http-auth-sequence-diagram](/img/http-auth/sequence-diagram.png)
 
-:::caution
+:::warning
 这种身份验证方案会对凭据进行编码，但是并不会进行加密。除非信息交换通过安全的连接（HTTPS/TLS），否则这件事极其不安全的。
 :::
 
