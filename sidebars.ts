@@ -2,6 +2,7 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs'
 
 const sidebars: SidebarsConfig = {
   docsSidebar: [
+    'roadmap',
     {
       label: '网络',
       type: 'category',
