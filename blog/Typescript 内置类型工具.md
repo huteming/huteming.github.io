@@ -1,0 +1,254 @@
+---
+tags: [TS]
+---
+
+Typescript 给我们提供的内置类型工具可以帮助我们简化复杂的类型转换
+
+<!--truncate-->
+
+## 01.Partial\<Type\>
+
+作用: Partial 接收一个泛型类型 Type，并将 Type 所有属性都设置为可选的，返回构造的新类型。
+
+```ts
+interface Todo {
+  title: string
+  description: string
+}
+
+function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
+  return { ...todo, ...fieldsToUpdate }
+}
+
+const todo1 = {
+  title: 'organize desk',
+  description: 'clear clutter',
+}
+
+const todo2 = updateTodo(todo1, {
+  description: 'throw out trash',
+})
+```
+
+## 02.Required\<Type\>
+
+作用: Required 接收一个泛型类型 Type，并将 Type 所有属性都设置为必选的，返回构造的新类型
+
+```ts
+interface Props {
+  a?: number
+  b?: string
+}
+
+const obj: Props = { a: 5 }
+
+const obj2: Required<Props> = { a: 5 } // ❗️ error
+```
+
+## 03. Readonly\<Type\>
+
+作用: Readonly 接收一个泛型类型 Type，并将 Type 所有属性都设置为只读的，返回构造的新类型， 新类型的属性不可再进行分配。
+
+```ts
+interface Todo {
+  title: string
+}
+
+const todo: Readonly<Todo> = {
+  title: 'Delete inactive users',
+}
+
+todo.title = 'Hello' //❗️ error
+```
+
+## 04.Record\<Keys, Type\>
+
+作用: 构造一个对象类型，其属性键为 Keys，属性值为 Type
+
+```ts
+interface CatInfo {
+  age: number
+  breed: string
+}
+
+type CatName = 'miffy' | 'boris' | 'mordred'
+
+const cats: Record<CatName, CatInfo> = {
+  miffy: { age: 10, breed: 'Persian' },
+  boris: { age: 5, breed: 'Maine Coon' },
+  mordred: { age: 16, breed: 'British Shorthair' },
+}
+
+cats.boris
+```
+
+## 05. Pick\<Type, Keys\>
+
+作用: 从类型 Type 中选择一组属性 Keys 来创建类型。
+
+```ts
+interface Todo {
+  title: string
+  description: string
+  completed: boolean
+}
+
+type TodoPreview = Pick<Todo, 'title' | 'completed'>
+
+const todo: TodoPreview = {
+  title: 'Clean room',
+  completed: false,
+}
+
+todo
+```
+
+## 06. Exclude\<UnionType, ExcludedMembers\>
+
+作用: 从联合类型 UnionType 中排除 ExcludedMembers 类型然后返回一个新类型
+
+```ts
+type T0 = Exclude<'a' | 'b' | 'c', 'a'>
+
+type T1 = Exclude<'a' | 'b' | 'c', 'a' | 'b'>
+
+type T2 = Exclude<string | number | (() => void), Function>
+
+type Shape =
+  | { kind: 'circle'; radius: number }
+  | { kind: 'square'; x: number }
+  | { kind: 'triangle'; x: number; y: number }
+
+type T3 = Exclude<Shape, { kind: 'circle' }>
+```
+
+## 07. Extract\<Type, Union\>
+
+作用: 从联合类型 Type 中提取 Union 类型然后返回一个新类型
+
+```ts
+type T0 = Extract<'a' | 'b' | 'c', 'a' | 'f'>
+
+type T1 = Extract<string | number | (() => void), Function>
+
+type Shape =
+  | { kind: 'circle'; radius: number }
+  | { kind: 'square'; x: number }
+  | { kind: 'triangle'; x: number; y: number }
+
+type T2 = Extract<Shape, { kind: 'circle' }>
+```
+
+## 08. Omit\<Type, Keys\>
+
+作用: 与 Pick 相反，Omit 是从 Type 中选取所有 Keys 属性然后删除构造一个新类型
+
+```ts
+interface Todo {
+  title: string
+  description: string
+  completed: boolean
+  createdAt: number
+}
+
+type TodoPreview = Omit<Todo, 'description'>
+
+const todo: TodoPreview = {
+  title: 'Clean room',
+  completed: false,
+  createdAt: 1615544252770,
+}
+
+todo
+
+type TodoInfo = Omit<Todo, 'completed' | 'createdAt'>
+
+const todoInfo: TodoInfo = {
+  title: 'Pick up kids',
+  description: 'Kindergarten closes at 5pm',
+}
+
+todoInfo
+```
+
+## 09. NonNullable\<Type\>
+
+作用: 通过从 Type 中排除 null 和 undefined 来构造一个类型
+
+```ts
+type T0 = NonNullable<string | number | undefined>
+
+type T1 = NonNullable<string[] | null | undefined>
+```
+
+## 10. Parameters\<Type\>
+
+作用: 接受一个函数类型, 将函数的参数处理成一个元组类型
+
+## 11. ConstructorParameters\<Type\>
+
+作用: 接受一个具有构造函数的类型, 将构造函数的参数处理成一个元组类型
+
+## 12. ReturnType\<Type\>
+
+作用: 获取函数类型的返回值类型
+
+## 13. InstanceType\<Type\>
+
+作用: 获取构造函数类型的返回类型（构造函数返回什么什么类型，InstanceType 获取的就是什么类型）
+
+## 14. Awaited\<Type\>
+
+作用: 获取 Promise 中的类型(如 await、then 方法返回的被 Promise 包裹的数据的类型)。适合处理异步操作并确保解析值的类型安全。
+
+```ts
+type A = Awaited<Promise<string>>
+
+type B = Awaited<Promise<Promise<number>>>
+
+type C = Awaited<boolean | Promise<number>>
+```
+
+## 15. ThisParameterType\<Type\>
+
+作用: 提取函数类型的 this 参数的类型, 如果函数类型没有 this 参数, 返回 unknown
+
+## 16. OmitThisParameter\<Type\>
+
+作用: 与 ThisParameterType 相反， 排除函数类型的 this 参数
+
+## 17. ThisType\<Type\>
+
+作用: 控制字面量对象中 this 所表示的类型。 只在--noImplicitThis 下有用
+
+## 18. ReadonlyArray\<Type\>
+
+作用: 描述只能读的数组， 不可进行添加、删除、替换操作
+
+## 19. Uppercase\<StringType\>
+
+作用: 将字符串中的每个字符转换为对应的大写
+
+## 20. Lowercase\<StringType\>
+
+作用: 将字符串中的每个字符转换为对应的小写。
+
+## 21. Capitalize\<StringType\>
+
+作用: 将字符串中的第一个字符转换为大写字母。
+
+## 22. Uncapitalize\<StringType\>
+
+作用: 将字符串中的第一个字符转换为小写字母
+
+## 类型库
+
+Typescript 中一些优秀的静态类型的实用工具库
+
+- [utility-types](https://github.com/piotrwitek/utility-types)
+- [type-fest](https://github.com/sindresorhus/type-fest)
+- [ts-toolbelt](https://millsp.github.io/ts-toolbelt/index.html)
+
+## 参考
+
+- [官方类型工具](https://www.typescriptlang.org/docs/handbook/utility-types.html)
