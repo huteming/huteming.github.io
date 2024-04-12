@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Vue</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>大括号</h1>
+            {{ msg }}
+
+            <h1>v-text</h1>
+            <h3 v-text="msg"></h3>
+            <br />
+
+            <h1>v-model</h1>
+            <input type="text" v-model="msg" />
+            <br />
+        </div>
+
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>
