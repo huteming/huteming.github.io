@@ -1,4 +1,5 @@
 import React from 'react'
+import dayjs from 'dayjs'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
@@ -18,7 +19,7 @@ interface Props {
   title: string
   description: string
   tags: Nullable<string[]>
-  date: string
+  date: Date
   readingTime: number
   link: string
 }
@@ -36,6 +37,7 @@ const bull = (
 export default function BlogCard(props: Props) {
   const { image, title, description, tags, date, readingTime, link } = props
 
+  const formattedDate = dayjs(date).format('YYYY-MM-DD')
   const mediaImage = image ?? defaultImage
   const readingTimeStr = `${Math.ceil(readingTime)} mins`
 
@@ -84,7 +86,7 @@ export default function BlogCard(props: Props) {
           </Stack>
 
           <Typography variant='body2' color='text.secondary'>
-            {date} {bull} {readingTimeStr}
+            {formattedDate} {bull} {readingTimeStr}
           </Typography>
         </Stack>
       </CardContent>

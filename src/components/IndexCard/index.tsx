@@ -11,7 +11,7 @@ interface ICardProps {
 export default function IndexCard(props: ICardProps): JSX.Element {
   const { blog } = props
   const { metadata } = blog
-  const { permalink, title, description, readingTime, formattedDate, frontMatter } = metadata
+  const { permalink, title, description, readingTime, date, frontMatter } = metadata
   const { tags = [], image } = frontMatter
 
   const tagStrArr = React.useMemo(() => {
@@ -20,5 +20,5 @@ export default function IndexCard(props: ICardProps): JSX.Element {
     })
   }, [tags])
 
-  return <BlogCard image={image} title={title} description={description} tags={tagStrArr} date={formattedDate} readingTime={readingTime} link={permalink} />
+  return <BlogCard image={image} title={title} description={description} tags={tagStrArr} date={date} readingTime={readingTime} link={permalink} />
 }
