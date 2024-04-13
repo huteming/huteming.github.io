@@ -11,6 +11,7 @@ import TextField from '@mui/material/TextField'
 import IndexCard from '@site/src/components/IndexCard'
 import Container from '@mui/material/Container'
 import { Divider } from '@mui/material'
+import ScrollToTopButton from '@site/src/components/ScrollToTopButton'
 
 import styles from './index.module.scss'
 
@@ -81,6 +82,8 @@ export default function Home(): JSX.Element {
 
         <Divider sx={{ mt: 5 }}>没有更多了</Divider>
       </Container>
+
+      <ScrollToTopButton />
     </Layout>
   )
 }
