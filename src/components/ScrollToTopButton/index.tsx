@@ -5,6 +5,8 @@ import Box from '@mui/material/Box'
 import Tooltip from '@mui/material/Tooltip'
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded'
 import Fade from '@mui/material/Fade'
+import { Theme } from '@mui/material/styles'
+import { blue } from '@mui/material/colors'
 
 export default function BackToTop() {
   const [open, setOpen] = React.useState(false)
@@ -41,8 +43,23 @@ export default function BackToTop() {
             zIndex: 10,
           }}
         >
-          <Fab color='primary' size='small' onClick={handleClick}>
-            <KeyboardArrowUpRoundedIcon />
+          <Fab
+            size='small'
+            onClick={handleClick}
+            sx={(theme) => ({
+              backgroundColor: blue[50],
+              border: `1px solid ${blue[200]}`,
+              boxShadow: `0px 4px 12px rgba(0, 0, 0, 0.1)`,
+              '&:hover': {
+                backgroundColor: blue[200],
+              },
+            })}
+          >
+            <KeyboardArrowUpRoundedIcon
+              sx={(theme: Theme) => ({
+                color: blue[800],
+              })}
+            />
           </Fab>
         </Box>
       </Tooltip>
