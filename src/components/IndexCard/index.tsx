@@ -2,7 +2,7 @@ import React from 'react'
 import type { BlogPost } from '@docusaurus/plugin-content-blog'
 import styles from './index.module.scss'
 import Link from '@docusaurus/Link'
-import BlogCard from '@site/src/components/BlogCard'
+import BlogCard from '@site/src/components/BlogCard-v2'
 
 interface ICardProps {
   blog: BlogPost

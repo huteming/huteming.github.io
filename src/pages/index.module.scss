@@ -1,27 +1,17 @@
-.wrapper {
-  padding: 40px 64px 64px 64px;
-}
-
-.centerLayout {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 320px);
-  justify-content: center;
-  gap: 32px;
+.layout {
+  padding-top: 40px;
+  padding-bottom: 150px;
+  background-color: #f2f2f2;
 }
 
 .header {
-  @extend .centerLayout;
-}
-
-.headerFilter {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  margin-bottom: 32px;
+  // padding: 10px 0;
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
 .content {
-  @extend .centerLayout;
   margin-top: 32px;
 }
