@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer'
 import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
+import dayjs from 'dayjs'
 
 const TITLE = '特_明'
 
@@ -135,6 +136,11 @@ const config: Config = {
       './src/plugins/blog-data/index.ts',
       {
         blogSidebarCount: 5,
+        processBlogPosts: async ({ blogPosts }) => {
+          return blogPosts.sort((a, b) => {
+            return dayjs(a.metadata.date).isAfter(dayjs(b.metadata.date)) ? -1 : 1
+          })
+        },
       } satisfies Preset.Options['blog'],
     ],
   ],

@@ -36,6 +36,9 @@ const bull = (
   </Box>
 )
 
+/**
+ * 样式参考自: https://www.bootstrapmb.com/item/10131/preview
+ */
 export default function BlogCard(props: Props) {
   const { image, title, description, tags, date, readingTime, link } = props
 
@@ -49,7 +52,21 @@ export default function BlogCard(props: Props) {
 
       <div className={styles.content}>
         {/* title */}
-        <div className={styles.title}>{title}</div>
+        <div className={styles.title}>
+          <Link
+            component={DocusaurusLink}
+            to={link}
+            underline='hover'
+            sx={{
+              color: 'inherit',
+              ':hover': {
+                color: 'inherit',
+              },
+            }}
+          >
+            {title}
+          </Link>
+        </div>
 
         {/* desc */}
         <div className={styles.desc}>{description}</div>
