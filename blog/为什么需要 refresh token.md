@@ -1,6 +1,6 @@
 ---
-tags: [html]
-image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/0d0e851dfeb4b5754c0db81529fe7d2a?_a=AQAEufR
+image: https://cdn.colorhub.me/flklDVZltXc/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vYWUvZTIvZjM0ZmI4ZmIzZmVhYzM4ZmE5MmU0NGYzY2RjZWU5ZWRhZDBiYWVlMi5qcGVn.webp
+tags: [HTTP]
 ---
 
 **为什么需要 access token 和 refresh token？**

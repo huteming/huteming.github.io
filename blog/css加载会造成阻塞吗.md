@@ -1,6 +1,6 @@
 ---
-tags: [css, 性能优化]
-image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/71983382ced819139f6611fff4d4231a?_a=AQAEufR
+image: https://img.colorhub.me/bV3xEnDBTdE/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vZmUvZmMvYWI4NmEzNDFmZWRiYmE4ZWIxZTVjNWI0ZWFjNjgxYTUyYTUzZmVmYy5qcGVn.webp
+tags: [CSS, 性能优化]
 ---
 
 总所周知，JS 执行会阻塞 DOM 树的解析和渲染。

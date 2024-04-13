@@ -26,9 +26,7 @@ interface Props {
   link: string
 }
 
-// https://res.cloudinary.com/daily-now/image/upload/f_auto/v1/placeholders/1
-// https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/61b95af3fa2a7c781ee52899fcaba008?_a=AQAEufR
-const defaultImage = 'https://res.cloudinary.com/daily-now/image/upload/f_auto/v1/placeholders/1'
+const defaultImage = 'https://img.colorhub.me/PFEoyUMMvRY/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vMTIvMGUvZTNjOWY3ZTY2Zjg3MmMyMThlYTVlMWUyYTA5NTU4MTQxMGEwMTIwZS5qcGVn.webp'
 
 const bull = (
   <Box component='span' sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
@@ -80,7 +78,8 @@ export default function BlogCard(props: Props) {
           </Stack>
 
           <div className={styles.info}>
-            {formattedDate} {bull} {readingTimeStr}
+            {/* {formattedDate} {bull} {readingTimeStr} */}
+            {readingTimeStr} {bull} {formattedDate}
           </div>
         </div>
       </div>

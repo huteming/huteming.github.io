@@ -1,6 +1,6 @@
 ---
 title: axios 源码解析
-tags: [http, axios]
+tags: [HTTP, JS, axios]
 ---
 
 axios 源码中几个关键点的解析。版本号 `v0.26.0`

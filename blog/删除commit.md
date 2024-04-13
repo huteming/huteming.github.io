@@ -1,5 +1,6 @@
 ---
-tags: [git]
+image: https://cdn.colorhub.me/xVAej2uqBuQ/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vYzMvYzgvZGU0MWVlMjVlODlkZDdhNDE3NDA2ZTFlOGMxNGM1OTk1ODYxYzNjOC5qcGVn.webp
+tags: [Git]
 ---
 
 如果需要删除的不只是某个文件，而是交错的代码，那么有以下三种方法可以删除 commit 。

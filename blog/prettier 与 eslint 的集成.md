@@ -1,6 +1,6 @@
 ---
+image: https://photo.colorhub.me/7NHpZ2uBS9E/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vY2YvMDEvYTkyMWEzOWI1Mjk5MzQ3NGI4YmE0MTllY2E4OTEzYTgzMDZjY2YwMS5qcGVn.webp
 tags: [prettier, eslint]
-image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/018428abdf26912e7a5ca8759cd1859f?_a=AQAEufR
 ---
 
 聊聊 prettier 与 eslint 的区别，以及它们同时使用时该如何配置。

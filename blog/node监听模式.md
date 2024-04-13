@@ -1,5 +1,6 @@
 ---
-tags: [nodejs]
+image: https://img.colorhub.me/87kgsyiki4g/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vOWYvZTgvZjFiZjExMDViNTQ2MTBhZjJiOWE4NGJhYWEwMmJjYzgzNDE2OWZlOC5qcGc.webp
+tags: [NodeJs]
 ---
 
 在 nodejs 中实现监听模式的几种方案

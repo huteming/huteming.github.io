@@ -24,9 +24,7 @@ interface Props {
   link: string
 }
 
-// https://res.cloudinary.com/daily-now/image/upload/f_auto/v1/placeholders/1
-// https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/61b95af3fa2a7c781ee52899fcaba008?_a=AQAEufR
-const defaultImage = 'https://res.cloudinary.com/daily-now/image/upload/f_auto/v1/placeholders/1'
+const defaultImage = 'https://photo.colorhub.me/UC_NQFKIojc/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vNmUvZjcvNzc0YjJhZWEyYzFjZGE0ODA3OWE2Y2RiZmNiZTA1NmNmNjk2NmVmNy5qcGc.webp'
 
 const bull = (
   <Box component='span' sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>

@@ -1,6 +1,6 @@
 ---
-tags: [ts]
-image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/e22aad950be236fec9db8f2aa660d0fd?_a=AQAEufR
+image: https://cdn.colorhub.me/KqwWDcEfVIk/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vY2EvYWEvNTA0NTEyMDUyZWNlYTE1NDFmZjlmYjQ1ZDMxOTFmMDE1MzJjY2FhYS5qcGVn.webp
+tags: [TS]
 ---
 
 在做 [ts 类型练习](https://typehero.dev/explore)的时候，碰到需要比较两个类型是否相同，看到答案里有这么一种方法

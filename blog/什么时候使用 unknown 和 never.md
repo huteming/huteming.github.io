@@ -1,6 +1,6 @@
 ---
-tags: [ts]
-image: https://res.cloudinary.com/daily-now/image/upload/f_auto,q_auto/v1/posts/bd5a56ec3630c1b5dd1b2a9e1fbdef0e?_a=AQAEufR
+image: https://img.colorhub.me/Gk-AZUhBCGA/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vMzMvOGEvN2Q2NjMyZmZkNjI3MWM0YzI5NzVkNGM5MzNjMzRjNmRiNTk5MzM4YS5qcGc.webp
+tags: [TS]
 ---
 
 **unknown 是所有可能值的集合**。任何值都可以分配给 unknown 类型的变量。这意味着 unknown 是所有其他类型的超类型。因此， unknown 被称为顶级类型

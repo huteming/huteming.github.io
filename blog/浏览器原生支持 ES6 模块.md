@@ -1,5 +1,6 @@
 ---
-tags: [html]
+image: https://photo.colorhub.me/sP9ffuUmEmU/rs:auto:0:500:0/g:ce/fn:colorhub/bG9jYWw6Ly8vZTMvMDgvN2FkNDEzMmQwMGQ5ZGUyNDhmY2ZhZDg0ZDNlMjY1NDI0NjRjZTMwOC5qcGVn.webp
+tags: [HTML]
 ---
 
 [MDN 详细介绍](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
