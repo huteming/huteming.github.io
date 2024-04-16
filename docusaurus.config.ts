@@ -69,6 +69,12 @@ const config: Config = {
           label: 'Roadmap',
           sidebarId: 'roadmap',
         },
+        {
+          type: 'docSidebar',
+          position: 'left',
+          label: 'Code',
+          sidebarId: 'code',
+        },
       ],
     },
 
