@@ -58,16 +58,16 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar', // 把这个项目的类型设置为侧边栏链接
-          position: 'left',
-          label: 'Docs',
-          sidebarId: 'docsSidebar', // 可以将一个导航栏项目链接到某个给定侧边栏的第一个文档链接
-        },
-        {
           type: 'docSidebar',
           position: 'left',
           label: 'Roadmap',
           sidebarId: 'roadmap',
+        },
+        {
+          type: 'docSidebar', // 把这个项目的类型设置为侧边栏链接
+          position: 'left',
+          label: 'Docs',
+          sidebarId: 'docsSidebar', // 可以将一个导航栏项目链接到某个给定侧边栏的第一个文档链接
         },
         {
           type: 'docSidebar',
