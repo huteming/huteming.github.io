@@ -56,6 +56,9 @@ dependencies:
   sass:
     specifier: ^1.70.0
     version: 1.70.0
+  unist-util-visit:
+    specifier: ^5.0.0
+    version: 5.0.0
 
 devDependencies:
   '@docusaurus/module-type-aliases':
