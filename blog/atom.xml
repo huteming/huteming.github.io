@@ -2,11 +2,26 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huteming.github.io/blog</id>
     <title>特_明 Blog</title>
-    <updated>2024-04-11T12:28:31.000Z</updated>
+    <updated>2024-05-30T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huteming.github.io/blog"/>
     <subtitle>特_明 Blog</subtitle>
     <icon>https://huteming.github.io/site/logo/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[TS 无法写入文件]]></title>
+        <id>https://huteming.github.io/blog/TS 无法写入文件</id>
+        <link href="https://huteming.github.io/blog/TS 无法写入文件"/>
+        <updated>2024-05-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[tsconfig.json 报错: 无法写错写入文件 ，因为他会覆盖输入文件 是怎么回事？]]></summary>
+        <content type="html"><![CDATA[<p>tsconfig.json 报错: <!-- --><code>无法写错写入文件 ，因为他会覆盖输入文件</code> 是怎么回事？<!-- --></p>
+<!-- --><p>这个错误通常是由于 tsconfig.json 中的编译选项配置导致的。</p>
+<!-- --><p>具体来说，这个错误可能是在输出目录与输入文件目录重叠时发生的。</p>
+<!-- --><h2 class="anchor anchorWithStickyNavbar_RWgH" id="输出目录配置错误">输出目录配置错误<!-- --><a href="https://huteming.github.io/blog/TS%20%E6%97%A0%E6%B3%95%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6#%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF" class="hash-link" aria-label="输出目录配置错误的直接链接" title="输出目录配置错误的直接链接">​</a></h2>
+<!-- --><p>如果 <!-- --><code>outDir</code> 未指定，TypeScript 编译器会尝试在同一目录中写入输出文件，从而覆盖输入文件。<!-- --></p>
+<!-- --><p>参考 <!-- --><a href="https://www.typescriptlang.org/tsconfig/#outDir" target="_blank" rel="noopener noreferrer">tsconfig.json</a>。<!-- --></p>
+<!-- --><p>所以，确保 outDir 指向一个单独的目录（例如 ./dist）。</p>]]></content>
+        <category label="TS" term="TS"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[word-break 和 overflow-wrap]]></title>
         <id>https://huteming.github.io/blog/word-break 和 overflow-wrap</id>
