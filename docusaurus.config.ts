@@ -77,6 +77,11 @@ const config: Config = {
           label: 'Code',
           sidebarId: 'code',
         },
+        {
+          position: 'left',
+          label: 'Resources',
+          to: '/resources',
+        },
       ],
     },
 
