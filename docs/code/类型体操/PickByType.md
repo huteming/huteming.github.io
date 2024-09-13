@@ -1,10 +1,4 @@
----
-sidebar_position: 1
----
-
-示例
-
-```ts
+```ts monaco
 /**
  * Expect: { isReadonly: boolean; isEnable: boolean; }
  */
@@ -17,10 +11,7 @@ type OnlyBoolean = PickByType<
   },
   boolean
 >
-```
 
-实现
-
-```ts
+// 实现
 type PickByType<T, U> = { [P in keyof T as T[P] extends U ? P : never]: T[P] }
 ```
