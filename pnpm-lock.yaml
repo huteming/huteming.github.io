@@ -44,6 +44,12 @@ importers:
       docusaurus-plugin-sass:
         specifier: ^0.2.5
         version: 0.2.5(@docusaurus/core@3.5.2(@docusaurus/types@3.5.2(react-dom@18.0.0(react@18.0.0))(react@18.0.0))(@mdx-js/react@3.0.0(@types/react@18.2.48)(react@18.0.0))(react-dom@18.0.0(react@18.0.0))(react@18.0.0)(typescript@5.2.2))(sass@1.70.0)(webpack@5.89.0)
+      hastscript:
+        specifier: ^9.0.0
+        version: 9.0.0
+      monaco-editor:
+        specifier: ^0.51.0
+        version: 0.51.0
       prism-react-renderer:
         specifier: ^2.3.0
         version: 2.3.0(react@18.0.0)
@@ -75,6 +81,9 @@ importers:
       '@types/react':
         specifier: ^18.2.48
         version: 18.2.48
+      monaco-editor-webpack-plugin:
+        specifier: ^7.1.0
+        version: 7.1.0(monaco-editor@0.51.0)(webpack@5.89.0)
       typescript:
         specifier: ~5.2.2
         version: 5.2.2
@@ -2726,6 +2735,9 @@ packages:
   hastscript@8.0.0:
     resolution: {integrity: sha512-dMOtzCEd3ABUeSIISmrETiKuyydk1w0pa+gE/uormcTpSYuaNJPbX1NU3JLyscSLjwAQM8bWMhhIlnCqnRvDTw==}
 
+  hastscript@9.0.0:
+    resolution: {integrity: sha512-jzaLBGavEDKHrc5EfFImKN7nZKKBdSLIdGvCwDZ9TfzbF2ffXiov8CKE445L2Z1Ek2t/m4SKQ2j6Ipv7NyUolw==}
+
   he@1.2.0:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
@@ -3465,6 +3477,15 @@ packages:
   minipass@7.0.4:
     resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
     engines: {node: '>=16 || 14 >=14.17'}
+
+  monaco-editor-webpack-plugin@7.1.0:
+    resolution: {integrity: sha512-ZjnGINHN963JQkFqjjcBtn1XBtUATDZBMgNQhDQwd78w2ukRhFXAPNgWuacaQiDZsUr4h1rWv5Mv6eriKuOSzA==}
+    peerDependencies:
+      monaco-editor: '>= 0.31.0'
+      webpack: ^4.5.0 || 5.x
+
+  monaco-editor@0.51.0:
+    resolution: {integrity: sha512-xaGwVV1fq343cM7aOYB6lVE4Ugf0UyimdD/x5PWcWBMKENwectaEu77FAN7c5sFiyumqeJdX1RPTh1ocioyDjw==}
 
   mrmime@2.0.0:
     resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==}
@@ -8616,6 +8637,14 @@ snapshots:
       property-information: 6.4.0
       space-separated-tokens: 2.0.2
 
+  hastscript@9.0.0:
+    dependencies:
+      '@types/hast': 3.0.3
+      comma-separated-tokens: 2.0.3
+      hast-util-parse-selector: 4.0.0
+      property-information: 6.4.0
+      space-separated-tokens: 2.0.2
+
   he@1.2.0: {}
 
   history@4.10.1:
@@ -9586,6 +9615,14 @@ snapshots:
   minimist@1.2.8: {}
 
   minipass@7.0.4: {}
+
+  monaco-editor-webpack-plugin@7.1.0(monaco-editor@0.51.0)(webpack@5.89.0):
+    dependencies:
+      loader-utils: 2.0.4
+      monaco-editor: 0.51.0
+      webpack: 5.89.0
+
+  monaco-editor@0.51.0: {}
 
   mrmime@2.0.0: {}
 

@@ -3,6 +3,8 @@ import type { Config } from '@docusaurus/types'
 import type * as Preset from '@docusaurus/preset-classic'
 import dayjs from 'dayjs'
 import codepenEmbedPlugin from './src/remark/codepen-embed'
+import monacoEmbedPlugin from './src/remark/monaco-embed'
+import sectionPrefix from './src/remark/section-prefix'
 
 const TITLE = '特_明'
 
@@ -41,7 +43,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          remarkPlugins: [codepenEmbedPlugin],
+          remarkPlugins: [codepenEmbedPlugin, monacoEmbedPlugin, sectionPrefix],
         },
         blog: false,
         theme: {
@@ -162,6 +164,7 @@ const config: Config = {
         },
       } satisfies Preset.Options['blog'],
     ],
+    './src/plugins/monaco-editor/index.ts',
   ],
 }
 
