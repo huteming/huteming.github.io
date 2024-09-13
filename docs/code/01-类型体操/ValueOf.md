@@ -1,10 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 TS 内置关键字中有一个 keyof，实现一个类似的 ValueOf
-
-实现
 
 ```ts
 type ValueOf<T> = T[keyof T]

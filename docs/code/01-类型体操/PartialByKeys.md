@@ -1,10 +1,6 @@
----
-sidebar_position: 2
----
+实现一个泛型 `PartialByKeys<T, K>` ，它采用两个类型参数 T 和 K .
 
-实现一个泛型 PartialByKeys\<T, K\> ，它采用两个类型参数 T 和 K .
-
-K 指定应设置为可选的 T 属性集。如果 K 未提供，则应使所有属性都像普通 Partial\<T\> 属性一样可选。
+K 指定应设置为可选的 T 属性集。如果 K 未提供，则应使所有属性都像普通 `Partial<T>` 属性一样可选。
 
 例子
 
