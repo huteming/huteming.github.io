@@ -1,4 +1,8 @@
-```js
+---
+sidebar_position: 1
+---
+
+```ts monaco
 function equal(a, b) {
   // NaN
   if (a !== b) {
@@ -13,12 +17,4 @@ function equal(a, b) {
   }
   return true
 }
-```
-
-测试代码
-
-```js
-console.log(equal(-0, +0))
-console.log(equal(NaN, NaN))
-console.log(equal(1, 1))
 ```

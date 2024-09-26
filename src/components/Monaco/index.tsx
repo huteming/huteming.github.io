@@ -21,12 +21,13 @@ const Monaco: React.FC<Props> = (props) => {
       language: languageMap[className] || 'javascript',
       automaticLayout: true,
       scrollBeyondLastLine: false,
+      fontSize: 16,
     })
 
-    return myEditor.dispose
+    return () => myEditor.dispose()
   }, [code])
 
-  return <div ref={editorRef} style={{ height: '300px' }} />
+  return <div ref={editorRef} style={{ height: '400px' }} />
 }
 
 export default Monaco
