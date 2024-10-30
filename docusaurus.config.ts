@@ -80,9 +80,10 @@ const config: Config = {
           sidebarId: 'code',
         },
         {
+          type: 'docSidebar',
           position: 'left',
           label: 'Resources',
-          to: '/resources',
+          sidebarId: 'resource',
         },
       ],
     },
