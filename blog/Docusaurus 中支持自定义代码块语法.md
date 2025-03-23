@@ -5,6 +5,8 @@ tags: [Docusaurus]
 
 Docusaurus 中支持自定义代码块语法（如 ```code），可以通过扩展 Markdown 解析器的处理逻辑来实现这个功能.
 
+<!-- truncate -->
+
 步骤概述
 
 1. 自定义 Markdown 解析器：创建一个 Remark 插件来解析自定义的代码块语法。

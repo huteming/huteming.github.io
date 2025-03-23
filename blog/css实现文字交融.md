@@ -3,6 +3,10 @@ image: https://img.colorhub.me/AoO0B0dgXHk/rs:auto:0:500:0/g:ce/fn:colorhub/bG9j
 tags: [CSS]
 ---
 
+代码演示
+
+<!-- truncate -->
+
 ## 效果预览
 
 [在线查看](https://36sqt4.csb.app/)

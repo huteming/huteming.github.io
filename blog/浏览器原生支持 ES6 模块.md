@@ -5,6 +5,8 @@ tags: [HTML]
 
 [MDN 详细介绍](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
+<!-- truncate -->
+
 ## 不能使用裸露的模块说明符
 
 ```js

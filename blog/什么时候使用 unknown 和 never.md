@@ -7,6 +7,8 @@ tags: [TS]
 
 **never 是空集**。没有值可以分配给 never 类型的变量。事实上，将值类型解析为 never 是一个错误，因为这会产生矛盾。空集可以放入任何其他集合中，因此 never 是所有其他类型的子类型。这就是为什么 never 被称为底部类型
 
+<!-- truncate -->
+
 ![unknown+never](/img/blog/unknown+never.avif)
 
 对于任何类型的 T

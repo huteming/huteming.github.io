@@ -5,6 +5,8 @@ tags: [Git]
 
 如果需要删除的不只是某个文件，而是交错的代码，那么有以下三种方法可以删除 commit 。
 
+<!-- truncate -->
+
 ## git reset
 
 - git reset ：回滚到某次提交。

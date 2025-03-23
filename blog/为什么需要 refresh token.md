@@ -5,6 +5,8 @@ tags: [HTTP]
 
 **为什么需要 access token 和 refresh token？**
 
+<!-- truncate -->
+
 从权限上说，`refresh token` 是和授权服务器之间的凭证, `access token` 是和资源服务器之间的凭证。
 
 现代架构之所以用 token ，是因为后端普遍采用分布式，各服务器之间同步状态（比如 session ）的开销很大，所以干脆不用状态，而是给个 token ，后端各自验证 token 的有效性而无需与其他服务器沟通，这就是所谓的 stateless 。
